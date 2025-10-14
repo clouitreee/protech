@@ -1,0 +1,271 @@
+version: 1
+locales: [de, es]
+routes:
+  - key: home
+    path: "/"
+    locale_paths:
+      de: "/"
+      es: "/es"
+    title: "Startseite"
+    purpose: "Sofortiger Value-Transfer, USP, Weg zu Leistungen & Erstgespräch"
+    audience: ["KMU Inhaber:in/Office-Lead NRW", "Entscheider:in ohne eigene IT"]
+    key_interactions:
+      - "CTA: Kostenloses Erstgespräch"
+      - "Navigation zu Leistungen/Paketen"
+      - "Scroll zu Trust/Referenzen"
+    modules: ["HeroPrimary", "USPGrid", "ServiceTeaserGrid", "PricingTeaser", "Testimonials", "MiniFAQ", "FinalCTA"]
+    keywords: ["IT-Dienstleister NRW", "Managed Services Köln", "IT-Support KMU", "IT-Betreuung Nordrhein-Westfalen", "MSP Köln"]
+    faqs:
+      - question: "Wie schnell können Sie bei einem IT-Notfall helfen?"
+        answer: "Bei dringenden IT-Problemen sind wir innerhalb von 2-4 Stunden für Sie da, remote oft sogar sofort."
+      - question: "Welche Unternehmen betreuen Sie hauptsächlich?"
+        answer: "Wir sind spezialisiert auf kleine und mittelständische Unternehmen in NRW mit 5-50 Mitarbeitenden."
+      - question: "Was kostet ein Erstgespräch?"
+        answer: "Das Erstgespräch ist für Sie völlig kostenlos und unverbindlich."
+    subpages: []
+
+  - key: services
+    path: "/leistungen"
+    locale_paths:
+      de: "/leistungen"
+      es: "/es/servicios"
+    title: "Leistungen"
+    purpose: "Übersicht aller Services mit Pfad zu Details"
+    audience: ["KMU", "Office-Manager:in", "Freelancer (B2B)"]
+    key_interactions: ["Service-Detail klicken", "Kontakt/Angebot", "Scroll-Scan der Kategorien"]
+    modules: ["ServiceCards", "ContextCTA"]
+    keywords: ["IT-Services NRW", "IT-Dienstleistungen Köln", "Managed IT", "Remote Support", "Vor-Ort-Service"]
+    faqs:
+      - question: "Welche IT-Services bieten Sie an?"
+        answer: "Wir bieten Managed IT-Services, IT-Support, Vor-Ort-Service und Remote-Service für KMU in NRW."
+      - question: "Können Sie auch außerhalb von NRW helfen?"
+        answer: "Remote-Services bieten wir deutschlandweit an, Vor-Ort-Service konzentriert sich auf NRW."
+    subpages:
+      - key: managed_services
+        path: "/leistungen/managed-services"
+        locale_paths:
+          de: "/leistungen/managed-services"
+          es: "/es/servicios/gestionados"
+        title: "Managed IT-Services"
+        purpose: "Abo-Betreuung, Nutzen vs Break/Fix, Paketvergleich"
+        audience: ["KMU ohne IT", "KMU mit knapper IT"]
+        key_interactions: ["Paket wählen", "CTA Beratung", "FAQ lesen"]
+        modules: ["BenefitsList", "PricingTable3", "SLAHighlights", "SecurityNote", "FAQ", "CTA"]
+        keywords: ["Managed Services NRW", "IT-Betreuung Abo", "Proaktive IT-Wartung", "IT-Flatrate KMU", "MSP Köln"]
+        faqs:
+          - question: "Was ist der Unterschied zwischen Managed Services und normalem IT-Support?"
+            answer: "Managed Services bedeutet proaktive Betreuung im Abo-Modell, während normaler Support reaktiv bei Problemen hilft."
+          - question: "Welche Managed Service Pakete bieten Sie an?"
+            answer: "Wir bieten drei Pakete: Basis (Monitoring & Updates), Professional (mit Support) und Premium (Full Service mit SLA)."
+          - question: "Ist ein langfristiger Vertrag erforderlich?"
+            answer: "Unsere Managed Services haben flexible Laufzeiten ab 12 Monaten mit fairer Kündigungsfrist."
+          - question: "Was ist in den monatlichen Kosten enthalten?"
+            answer: "Je nach Paket: Monitoring, Updates, Backups, Support-Stunden, Security-Checks und Vor-Ort-Besuche."
+
+      - key: it_support
+        path: "/leistungen/it-support"
+        locale_paths:
+          de: "/leistungen/it-support"
+          es: "/es/servicios/soporte"
+        title: "IT-Support (Break/Fix)"
+        purpose: "Reaktive Hilfe, Geschwindigkeit, Transparenz"
+        audience: ["KMU mit Akutproblem"]
+        key_interactions: ["Notfall-CTA (Telefon/WA)", "Remote-Start", "Vor-Ort anfragen"]
+        modules: ["EmergencyBanner", "TroubleshootList", "RemoteVsOnsite", "CostTransparency", "FAQ", "CTA"]
+        keywords: ["IT-Support Köln", "Computer Hilfe NRW", "IT-Notfall", "Break-Fix Support", "Schnelle IT-Hilfe"]
+        faqs:
+          - question: "Wie schnell reagieren Sie bei IT-Problemen?"
+            answer: "Bei Notfällen sind wir remote oft innerhalb von Minuten erreichbar, vor Ort innerhalb von 2-4 Stunden."
+          - question: "Was kostet IT-Support auf Stundenbasis?"
+            answer: "Unsere Stundensätze sind transparent: Remote ab 95€/h, Vor-Ort ab 125€/h plus Anfahrt."
+          - question: "Können Sie auch am Wochenende helfen?"
+            answer: "Ja, für dringende Fälle bieten wir auch Wochenend- und Abend-Support an."
+
+      - key: onsite
+        path: "/leistungen/vor-ort-service"
+        locale_paths:
+          de: "/leistungen/vor-ort-service"
+          es: "/es/servicios/presencial"
+        title: "IT-Service vor Ort"
+        purpose: "Regionale Nähe, Szenarien, Reaktionszeit"
+        audience: ["NRW-KMU mit Hardware/Netzwerkbedarf"]
+        key_interactions: ["Vor-Ort-Termin anfragen", "Telefon", "WhatsApp"]
+        modules: ["UseCasesGrid", "RegionMap", "SLA/Anfahrt", "FAQ", "CTA"]
+        keywords: ["IT-Service vor Ort Köln", "Computer Techniker NRW", "Hardware Installation", "Netzwerk Setup", "IT-Techniker vor Ort"]
+        faqs:
+          - question: "In welchen Regionen bieten Sie Vor-Ort-Service an?"
+            answer: "Hauptsächlich in Köln und Umgebung, sowie im gesamten NRW-Gebiet nach Absprache."
+          - question: "Was sind typische Vor-Ort-Einsätze?"
+            answer: "Hardware-Installation, Netzwerk-Setup, Server-Wartung, Drucker-Probleme und Arbeitsplatz-Einrichtung."
+          - question: "Wie lange dauert die Anfahrt?"
+            answer: "In Köln meist unter 1 Stunde, im weiteren NRW-Gebiet 1-3 Stunden je nach Standort."
+
+      - key: remote
+        path: "/leistungen/remote-service"
+        locale_paths:
+          de: "/leistungen/remote-service"
+          es: "/es/servicios/remoto"
+        title: "Remote-Service"
+        purpose: "Soforthilfe ohne Anfahrt, Sicherheit der Fernwartung"
+        audience: ["KMU deutschlandweit", "Home-Office"]
+        key_interactions: ["Fernwartung starten/Anfordern", "Telefon", "FAQ"]
+        modules: ["HowItWorks3Steps", "ProblemTypesList", "SecurityAssurance", "FAQ", "CTA"]
+        keywords: ["Remote IT-Support", "Fernwartung", "Online IT-Hilfe", "Remote Desktop Support", "Sichere Fernwartung"]
+        faqs:
+          - question: "Wie funktioniert Remote-Support?"
+            answer: "Sie starten eine sichere Fernwartungssitzung, wir verbinden uns und lösen das Problem direkt auf Ihrem System."
+          - question: "Ist Remote-Support sicher?"
+            answer: "Ja, wir nutzen verschlüsselte Verbindungen und Sie behalten jederzeit die Kontrolle über die Sitzung."
+          - question: "Welche Probleme können remote gelöst werden?"
+            answer: "Software-Probleme, Konfigurationen, Updates, E-Mail-Einrichtung, Benutzer-Verwaltung und vieles mehr."
+
+  - key: about
+    path: "/ueber-uns"
+    locale_paths:
+      de: "/ueber-uns"
+      es: "/es/sobre-nosotros"
+    title: "Über uns"
+    purpose: "Vertrauen, Team/Story, Werte, Partner"
+    audience: ["Entscheider:in in Evaluierung"]
+    key_interactions: ["Kontakt", "Referenzen lesen"]
+    modules: ["MissionValues", "FounderCard", "TeamGrid", "PartnerLogos", "CTA"]
+    keywords: ["Tech Hilfe Pro NRW", "IT-Dienstleister Köln", "MSP Team", "IT-Partner NRW", "Über uns"]
+    faqs:
+      - question: "Seit wann sind Sie als IT-Dienstleister tätig?"
+        answer: "Tech Hilfe Pro NRW unterstützt Unternehmen in der Region seit mehreren Jahren mit professioneller IT-Betreuung."
+      - question: "Was macht Sie als IT-Partner besonders?"
+        answer: "Regionale Nähe, persönlicher Service, schnelle Reaktionszeiten und transparente Kommunikation auf Augenhöhe."
+    subpages: []
+
+  - key: references
+    path: "/referenzen"
+    locale_paths:
+      de: "/referenzen"
+      es: "/es/referencias"
+    title: "Referenzen / Kundenstimmen"
+    purpose: "Social Proof, kurze Cases, Zitate"
+    audience: ["Vergleichende Entscheider:in"]
+    key_interactions: ["Kontakt", "Case lesen"]
+    modules: ["LogoStrip", "CaseSnippets", "TestimonialsGrid", "CTA"]
+    keywords: ["Kundenstimmen IT", "Referenzen MSP", "IT-Support Erfahrungen", "Zufriedene Kunden", "Case Studies"]
+    faqs:
+      - question: "Welche Branchen betreuen Sie?"
+        answer: "Wir arbeiten branchenübergreifend mit Handwerksbetrieben, Kanzleien, Agenturen und Dienstleistern."
+      - question: "Kann ich mit bestehenden Kunden sprechen?"
+        answer: "Gerne vermitteln wir nach Absprache den Kontakt zu zufriedenen Bestandskunden."
+    subpages: []
+
+  - key: blog
+    path: "/blog"
+    locale_paths:
+      de: "/blog"
+      es: "/es/blog"
+    title: "Wissenscenter / Blog"
+    purpose: "SEO/AEO Long-Tail, Expertise"
+    audience: ["Recherche", "Self-Educating Buyer"]
+    key_interactions: ["Artikel lesen", "Kontakt CTA im Artikel"]
+    modules: ["PostList", "CategoryFilter", "SidebarCTA", "CTA"]
+    keywords: ["IT-Wissen", "IT-Tipps KMU", "Cyber-Security", "Cloud-Migration", "IT-Trends"]
+    faqs:
+      - question: "Wie oft veröffentlichen Sie neue Artikel?"
+        answer: "Wir veröffentlichen regelmäßig Fachartikel und Praxistipps rund um IT-Themen für KMU."
+      - question: "Kann ich Themenvorschläge einreichen?"
+        answer: "Sehr gerne! Kontaktieren Sie uns mit Ihren Wunschthemen und wir greifen diese auf."
+    subpages: []
+
+  - key: faq
+    path: "/faq"
+    locale_paths:
+      de: "/faq"
+      es: "/es/preguntas-frecuentes"
+    title: "FAQ"
+    purpose: "Vorabklärung, Objection-Handling"
+    audience: ["Erstkontakt", "Preis-/SLA-Fragen"]
+    key_interactions: ["Antwort lesen", "CTA Beratung"]
+    modules: ["FAQ", "CTA"]
+    keywords: ["IT-Support FAQ", "Häufige Fragen IT", "Managed Services Kosten", "SLA IT-Support", "IT-Betreuung Fragen"]
+    faqs:
+      - question: "Wie schnell können Sie bei einem IT-Notfall helfen?"
+        answer: "Bei dringenden IT-Problemen sind wir innerhalb von 2-4 Stunden für Sie da, remote oft sogar sofort."
+      - question: "Was kostet IT-Support?"
+        answer: "Die Kosten variieren je nach Service-Modell: Managed Services ab 199€/Monat, Stundensätze ab 95€ remote."
+      - question: "Brauche ich einen langfristigen Vertrag?"
+        answer: "Nein, wir bieten sowohl flexible Stundenabrechnungen als auch Managed Service Verträge mit fairen Laufzeiten."
+      - question: "Arbeiten Sie auch mit bestehenden IT-Dienstleistern zusammen?"
+        answer: "Ja, wir können als Ergänzung zu Ihrem bestehenden IT-Team oder als vollständiger Ersatz fungieren."
+      - question: "Welche Sicherheitsstandards setzen Sie um?"
+        answer: "Wir arbeiten nach aktuellen IT-Sicherheitsstandards einschließlich Verschlüsselung, Backup-Strategien und Compliance-Anforderungen."
+
+  - key: contact
+    path: "/kontakt"
+    locale_paths:
+      de: "/kontakt"
+      es: "/es/contacto"
+    title: "Kontakt"
+    purpose: "Niedrige Hürde zur Anfrage, Telefon/WA prominent"
+    audience: ["Hot/Ready Leads"]
+    key_interactions: ["Form senden", "Anrufen", "WhatsApp"]
+    modules: ["ContactIntro", "ContactCards", "ContactForm", "MapEmbed", "ComplianceNote"]
+    keywords: ["IT-Support Kontakt", "Tech Hilfe Pro erreichen", "IT-Beratung anfragen", "Erstgespräch", "Kontakt Köln"]
+    faqs:
+      - question: "Wie kann ich Sie am schnellsten erreichen?"
+        answer: "Am schnellsten erreichen Sie uns per Telefon oder WhatsApp unter +49 1556 5029989."
+      - question: "Wann sind Ihre Geschäftszeiten?"
+        answer: "Regulär Mo-Fr 9-18 Uhr, für Notfälle auch außerhalb dieser Zeiten nach Vereinbarung."
+    subpages: []
+
+  - key: legal
+    path: "/recht"
+    locale_paths:
+      de: "/recht"
+      es: "/es/legal"
+    title: "Rechtliches"
+    purpose: "Pflichtlinks im Footer"
+    audience: ["alle"]
+    key_interactions: ["Impressum/Datenschutz öffnen"]
+    modules: []
+    subpages:
+      - key: impressum
+        path: "/recht/impressum"
+        locale_paths:
+          de: "/recht/impressum"
+          es: "/es/legal/aviso-legal"
+        title: "Impressum"
+        purpose: "Gesetzliche Anbieterkennzeichnung"
+        audience: ["alle"]
+        key_interactions: []
+        modules: ["LegalText"]
+
+      - key: datenschutz
+        path: "/recht/datenschutz"
+        locale_paths:
+          de: "/recht/datenschutz"
+          es: "/es/legal/privacidad"
+        title: "Datenschutz"
+        purpose: "DSGVO-konforme Datenschutzerklärung"
+        audience: ["alle"]
+        key_interactions: []
+        modules: ["LegalText"]
+
+      - key: agb
+        path: "/recht/agb"
+        locale_paths:
+          de: "/recht/agb"
+          es: "/es/legal/terminos"
+        title: "AGB"
+        purpose: "Allgemeine Geschäftsbedingungen"
+        audience: ["Geschäftskunden"]
+        key_interactions: []
+        modules: ["LegalText"]
+
+      - key: widerruf
+        path: "/recht/widerruf"
+        locale_paths:
+          de: "/recht/widerruf"
+          es: "/es/legal/revocacion"
+        title: "Widerrufsbelehrung"
+        purpose: "Gesetzliche Widerrufsbelehrung"
+        audience: ["Verbraucher"]
+        key_interactions: []
+        modules: ["LegalText"]
+

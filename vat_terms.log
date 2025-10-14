@@ -1,0 +1,24 @@
+./docs/compliance/vat-removal-report.md:10:- `inkl.` (context-dependent replacement)
+./docs/compliance/vat-removal-report.md:11:- `zzgl.` (context-dependent replacement)
+./docs/compliance/vat-removal-report.md:12:- `VAT`
+./docs/compliance/vat-removal-report.md:13:- `IVA`
+./docs/compliance/vat-removal-report.md:14:- `inkl. MwSt.`
+./docs/compliance/vat-removal-report.md:15:- `zzgl. MwSt.`
+./docs/compliance/vat-removal-report.md:16:- `inkl. USt.`
+./docs/compliance/vat-removal-report.md:17:- `zzgl. USt.`
+./docs/compliance/vat-removal-report.md:18:- `inkl. Umsatzsteuer`
+./docs/compliance/vat-removal-report.md:19:- `zzgl. Umsatzsteuer`
+./docs/compliance/vat-removal-report.md:1:# VAT Removal Report
+./docs/compliance/vat-removal-report.md:20:- `inkl. Mehrwertsteuer`
+./docs/compliance/vat-removal-report.md:21:- `zzgl. Mehrwertsteuer`
+./docs/compliance/vat-removal-report.md:22:- `inkl. VAT`
+./docs/compliance/vat-removal-report.md:23:- `zzgl. VAT`
+./docs/compliance/vat-removal-report.md:24:- `inkl. IVA`
+./docs/compliance/vat-removal-report.md:25:- `zzgl. IVA`
+./docs/compliance/vat-removal-report.md:30:## Explicit VAT Term Removals
+./docs/compliance/vat-removal-report.md:32:  Original: `- Umsatzsteuer-ID`
+./docs/compliance/vat-removal-report.md:3:This report details the removal and replacement of VAT-related terms from the project files to ensure compliance with §19 UStG (Kleinunternehmerregelung).
+./docs/compliance/vat-removal-report.md:6:- `MwSt`
+./docs/compliance/vat-removal-report.md:7:- `Mehrwertsteuer`
+./docs/compliance/vat-removal-report.md:8:- `USt`
+./docs/compliance/vat-removal-report.md:9:- `Umsatzsteuer`

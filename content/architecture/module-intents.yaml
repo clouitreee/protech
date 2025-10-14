@@ -1,0 +1,775 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
+intents:
+- content_types:
+  - heading:h1
+  - paragraph:subline
+  - buttons:primary,secondary
+  - badges:optional
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /leistungen
+      label: Leistungen ansehen
+      type: link
+  notes: "Klarer Nutzen, 1\u20132 kurze CTAs, kein Bild n\xF6tig"
+  page: /
+  section: HeroPrimary
+- content_types:
+  - grid:3-6
+  - card
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: "3-6 pr\xE4gnante Nutzenpunkte, Icons und kurze Beschreibungen"
+  page: /
+  section: USPGrid
+- content_types:
+  - grid:3-4
+  - card
+  - heading:h3
+  - paragraph
+  - link
+  core_function: Information
+  ctas: {}
+  notes: Kompakte Vorschau der Hauptleistungen, verlinkt zu Detailseiten
+  page: /
+  section: ServiceTeaserGrid
+- content_types:
+  - grid:3
+  - card
+  - heading:h3
+  - list
+  - button
+  core_function: Information
+  ctas: {}
+  notes: "Anreiz f\xFCr Preismodelle, ohne konkrete Preise, weckt Interesse"
+  page: /
+  section: PricingTeaser
+- content_types:
+  - carousel/grid
+  - blockquote
+  - cite
+  core_function: Trust
+  ctas: {}
+  notes: Kundenstimmen zur Vertrauensbildung, mit Schema.org Markup
+  page: /
+  section: Testimonials
+- content_types:
+  - accordion/list
+  - heading:h3
+  - paragraph
+  core_function: Trust
+  ctas:
+    primary:
+      href: /kontakt
+      label: Weitere Fragen?
+      type: link
+  notes: "3-5 h\xE4ufige Fragen f\xFCr schnelle Antworten, verlinkt zur FAQ-Seite"
+  page: /
+  section: MiniFAQ
+- content_types:
+  - heading:h2
+  - paragraph
+  - buttons:primary,secondary
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Starker Call-to-Action am Seitenende, Fokus auf Kontaktaufnahme
+  page: /
+  section: FinalCTA
+- content_types:
+  - grid:2-4
+  - card
+  - heading:h3
+  - paragraph
+  - link
+  core_function: Information
+  ctas:
+    primary:
+      href: /leistungen
+      label: Mehr erfahren
+      type: link
+  notes: "\xDCbersicht der Dienstleistungen in Kartenform, verlinkt zu Detailseiten"
+  page: /leistungen
+  section: ServiceCards
+- content_types:
+  - callout/banner
+  - paragraph
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt
+      label: Jetzt beraten lassen
+      type: link
+  notes: Kontextbezogener CTA, weniger prominent, im Inhalt platziert
+  page: /leistungen
+  section: ContextCTA
+- content_types:
+  - list
+  - list-item
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: Detaillierte Liste der Vorteile, oft auf Leistungsseiten
+  page: /leistungen/managed-services
+  section: BenefitsList
+- content_types:
+  - grid:3
+  - card
+  - feature-list
+  - button
+  core_function: Information
+  ctas:
+    primary:
+      href: /kontakt#angebot
+      label: Angebot anfordern
+      type: link
+  notes: Vergleich von 3 Preispaketen mit Features und CTAs
+  page: /leistungen/managed-services
+  section: PricingTable3
+- content_types:
+  - stat-items:3
+  - definition-list
+  core_function: Information
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: Details anfragen
+      type: link
+  notes: "Wichtige SLA-Kennzahlen (Reaktionszeit, Verf\xFCgbarkeit)"
+  page: /leistungen/managed-services
+  section: SLAHighlights
+- content_types:
+  - callout/note
+  - list
+  core_function: Information
+  ctas: {}
+  notes: "Hinweis auf Sicherheitsma\xDFnahmen und Compliance"
+  page: /leistungen/managed-services
+  section: SecurityNote
+- content_types:
+  - accordion/list
+  - heading:h3
+  - paragraph
+  core_function: Trust
+  ctas:
+    primary:
+      href: /kontakt
+      label: Weitere Fragen?
+      type: link
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
+  page: /leistungen/managed-services
+  section: FAQ
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /leistungen/managed-services
+  section: CTA
+- content_types:
+  - banner
+  - heading:h2
+  - buttons:primary,secondary
+  core_function: Conversion
+  ctas:
+    primary:
+      href: tel:+4915565029989
+      label: Notfall melden
+      type: tel
+    secondary:
+      href: https://wa.me/4915565029989
+      label: WhatsApp
+      type: wa
+  notes: "Prominenter Banner f\xFCr Notfallkontakte"
+  page: /leistungen/it-support
+  section: EmergencyBanner
+- content_types:
+  - list
+  - list-item
+  - heading:h3
+  core_function: Information
+  ctas: {}
+  notes: "Liste h\xE4ufiger Probleme, die gel\xF6st werden k\xF6nnen"
+  page: /leistungen/it-support
+  section: TroubleshootList
+- content_types:
+  - grid:2
+  - card
+  - heading:h3
+  - list
+  core_function: Information
+  ctas: {}
+  notes: Vergleich von Remote- und Vor-Ort-Service
+  page: /leistungen/it-support
+  section: RemoteVsOnsite
+- content_types:
+  - table/grid
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: Transparente Darstellung der Kostenstruktur
+  page: /leistungen/it-support
+  section: CostTransparency
+- content_types:
+  - accordion/list
+  - heading:h3
+  - paragraph
+  core_function: Trust
+  ctas:
+    primary:
+      href: /kontakt
+      label: Weitere Fragen?
+      type: link
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
+  page: /leistungen/it-support
+  section: FAQ
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /leistungen/it-support
+  section: CTA
+- content_types:
+  - grid:2-3
+  - card
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: "Anwendungsbeispiele f\xFCr den Service in einem Grid"
+  page: /leistungen/vor-ort-service
+  section: UseCasesGrid
+- content_types:
+  - map-placeholder
+  - list
+  core_function: Information
+  ctas: {}
+  notes: Visualisierung des Servicegebiets, z.B. NRW
+  page: /leistungen/vor-ort-service
+  section: RegionMap
+- content_types: []
+  core_function: Information
+  ctas: {}
+  notes: Details zu Service Level Agreements und Anfahrtskosten
+  page: /leistungen/vor-ort-service
+  section: SLAHighlights
+- content_types:
+  - accordion/list
+  - heading:h3
+  - paragraph
+  core_function: Trust
+  ctas:
+    primary:
+      href: /kontakt
+      label: Weitere Fragen?
+      type: link
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
+  page: /leistungen/vor-ort-service
+  section: FAQ
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /leistungen/vor-ort-service
+  section: CTA
+- content_types:
+  - grid:3
+  - card
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: Prozessdarstellung in 3 einfachen Schritten
+  page: /leistungen/remote-service
+  section: HowItWorks3Steps
+- content_types:
+  - grid:2-3
+  - card
+  - heading:h3
+  - list
+  core_function: Information
+  ctas: {}
+  notes: "Kategorisierte Liste von remote l\xF6sbaren Problemen"
+  page: /leistungen/remote-service
+  section: ProblemTypesList
+- content_types:
+  - callout/note
+  - list
+  core_function: Information
+  ctas: {}
+  notes: Hinweis auf Sicherheit und Datenschutz bei Remote-Arbeit
+  page: /leistungen/remote-service
+  section: SecurityAssurance
+- content_types:
+  - accordion/list
+  - heading:h3
+  - paragraph
+  core_function: Trust
+  ctas:
+    primary:
+      href: /kontakt
+      label: Weitere Fragen?
+      type: link
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
+  page: /leistungen/remote-service
+  section: FAQ
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /leistungen/remote-service
+  section: CTA
+- content_types:
+  - grid:2
+  - card
+  - heading:h2
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: Darstellung der Unternehmensmission und Kernwerte
+  page: /ueber-uns
+  section: MissionValues
+- content_types:
+  - card
+  - heading:h3
+  - paragraph
+  - image-placeholder
+  core_function: Information
+  ctas: {}
+  notes: "Vorstellung des Gr\xFCnders mit Bild und Biografie"
+  page: /ueber-uns
+  section: FounderCard
+- content_types:
+  - grid:2-4
+  - card
+  - heading:h3
+  - paragraph
+  - image-placeholder
+  core_function: Information
+  ctas: {}
+  notes: Vorstellung der Teammitglieder in einem Grid
+  page: /ueber-uns
+  section: TeamGrid
+- content_types:
+  - logo-strip
+  - image-placeholder
+  core_function: Trust
+  ctas: {}
+  notes: Logos von Partnern oder Kunden als Vertrauenssignal
+  page: /ueber-uns
+  section: PartnerLogos
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /ueber-uns
+  section: CTA
+- content_types:
+  - logo-strip
+  - image-placeholder
+  core_function: Trust
+  ctas: {}
+  notes: Logos von Kunden oder Partnern als Vertrauenssignal
+  page: /referenzen
+  section: LogoStrip
+- content_types:
+  - grid:2-3
+  - card
+  - heading:h3
+  - paragraph
+  - link
+  core_function: Trust
+  ctas: {}
+  notes: "Kurze Fallstudien-Teaser mit Problem, L\xF6sung, Ergebnis"
+  page: /referenzen
+  section: CaseSnippets
+- content_types:
+  - grid:2-3
+  - blockquote
+  - cite
+  core_function: Trust
+  ctas: {}
+  notes: Grid mit mehreren Kundenstimmen
+  page: /referenzen
+  section: TestimonialsGrid
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /referenzen
+  section: CTA
+- content_types:
+  - grid:1-3
+  - card
+  - heading:h3
+  - paragraph
+  - link
+  core_function: Information
+  ctas: {}
+  notes: "Liste von Blog-Beitr\xE4gen mit Teasern"
+  page: /blog
+  section: PostList
+- content_types:
+  - button-group
+  - button
+  core_function: Information
+  ctas: {}
+  notes: "Filteroptionen f\xFCr Blog-Kategorien"
+  page: /blog
+  section: CategoryFilter
+- content_types:
+  - card
+  - heading:h3
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: '#newsletter'
+      label: Jetzt abonnieren
+      type: link
+  notes: Call-to-Action in der Seitenleiste, z.B. Newsletter
+  page: /blog
+  section: SidebarCTA
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /blog
+  section: CTA
+- content_types:
+  - accordion/list
+  - heading:h3
+  - paragraph
+  core_function: Trust
+  ctas:
+    primary:
+      href: /kontakt
+      label: Weitere Fragen?
+      type: link
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
+  page: /faq
+  section: FAQ
+- content_types:
+  - button-group
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt#termin
+      label: "Kostenloses Erstgespr\xE4ch"
+      type: link
+    secondary:
+      href: /kontakt
+      label: Kontakt aufnehmen
+      type: link
+  notes: Allgemeine Informationen oder spezifische Inhalte.
+  page: /faq
+  section: CTA
+- content_types:
+  - heading:h1
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: "Einleitungstext f\xFCr die Kontaktseite"
+  page: /kontakt
+  section: ContactIntro
+- content_types:
+  - grid:2-4
+  - card
+  - heading:h3
+  - paragraph
+  - link
+  core_function: Information
+  ctas: {}
+  notes: "Karten mit den verschiedenen Kontaktm\xF6glichkeiten (Telefon, E-Mail, etc.)"
+  page: /kontakt
+  section: ContactCards
+- content_types:
+  - form
+  - input
+  - textarea
+  - checkbox
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: /kontakt
+      label: Anfrage senden
+      type: submit
+  notes: Ein Kontaktformular mit den notwendigen Feldern und DSGVO-Checkbox.
+  page: /kontakt
+  section: ContactForm
+- content_types:
+  - map-placeholder
+  core_function: Information
+  ctas: {}
+  notes: "Ein Platzhalter f\xFCr eine eingebettete Karte."
+  page: /kontakt
+  section: MapEmbed
+- content_types:
+  - paragraph
+  - link
+  core_function: Legal
+  ctas: {}
+  notes: "Ein kurzer Hinweis zur DSGVO-Konformit\xE4t des Formulars."
+  page: /kontakt
+  section: ComplianceNote
+- content_types:
+  - heading:h2
+  - paragraph
+  core_function: Legal
+  ctas: {}
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
+  page: /recht/impressum
+  section: LegalText
+- content_types:
+  - heading:h2
+  - paragraph
+  core_function: Legal
+  ctas: {}
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
+  page: /recht/datenschutz
+  section: LegalText
+- content_types:
+  - heading:h2
+  - paragraph
+  core_function: Legal
+  ctas: {}
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
+  page: /recht/agb
+  section: LegalText
+- content_types:
+  - heading:h2
+  - paragraph
+  core_function: Legal
+  ctas: {}
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
+  page: /recht/widerruf
+  section: LegalText
+- content_types:
+  - logo-strip
+  - image-placeholder
+  core_function: Trust
+  ctas: {}
+  notes: Logos von Partnern oder Kunden als Vertrauenssignal
+  page: /
+  section: ProofBar
+- content_types:
+  - grid:3
+  - card
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: "3 h\xE4ufige Probleme und deren L\xF6sungen in Kartenform"
+  page: /
+  section: ProblemSolution
+- content_types:
+  - list
+  - list-item
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: 3-5 Schritte des Onboarding-Prozesses
+  page: /leistungen/managed-services
+  section: OnboardingSteps
+- content_types:
+  - grid:2-4
+  - card
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: "\xDCbersicht der automatisierten Playbooks (Monitoring, Patching, etc.)"
+  page: /leistungen/managed-services
+  section: PlaybooksGrid
+- content_types:
+  - grid:2-3
+  - card
+  - heading:h3
+  - paragraph
+  core_function: Information
+  ctas: {}
+  notes: "Auswahlm\xF6glichkeiten f\xFCr Service Level Agreements (Reaktionszeiten)"
+  page: /leistungen/it-support
+  section: SLAChooser
+- content_types:
+  - paragraph
+  - list
+  core_function: Information
+  ctas: {}
+  notes: "Informationen zu Gesch\xE4ftszeiten und Erreichbarkeit"
+  page: /kontakt
+  section: OfficeHours
+- content_types:
+  - button
+  core_function: Conversion
+  ctas:
+    primary:
+      href: https://wa.me/4915565029989
+      label: WhatsApp
+      type: wa
+  notes: Direkter WhatsApp-Kontakt-Button
+  page: /kontakt
+  section: WhatsAppQuickCTA
+- content_types:
+  - paragraph
+  - callout/note
+  core_function: Rechtliches
+  ctas: {}
+  notes: "Pflichthinweis gem\xE4\xDF \xA719 UStG (Kleinunternehmerregelung), erscheint\
+    \ unterhalb von Preistabellen"
+  page: /
+  section: LegalPricingNote
+- content_types:
+  - paragraph
+  - callout/note
+  core_function: Rechtliches
+  ctas: {}
+  notes: "Pflichthinweis gem\xE4\xDF \xA719 UStG (Kleinunternehmerregelung), erscheint\
+    \ unterhalb von Preistabellen"
+  page: /leistungen/managed-services
+  section: LegalPricingNote
+- section: ProofBar
+  page: /
+  core_function: Trust
+  content_types:
+  - logo-strip
+  - image-placeholder
+  ctas: {}
+  notes: Logo-Leiste zur Demonstration von Vertrauenssignalen (Zertifikate, Partner).
+- section: ProblemSolution
+  page: /
+  core_function: Information
+  content_types:
+  - grid:3
+  - card
+  - heading:h3
+  - paragraph
+  ctas: {}
+  notes: "Gegen\xFCberstellung von 3 typischen Kundenproblemen und den entsprechenden\
+    \ L\xF6sungen."
+- section: OnboardingSteps
+  page: /leistungen/managed-services
+  core_function: Information
+  content_types:
+  - grid:3-5
+  - card
+  - heading:h3
+  - paragraph
+  ctas: {}
+  notes: Darstellung des Onboarding-Prozesses in 3-5 Schritten.
+- section: PlaybooksGrid
+  page: /leistungen/managed-services
+  core_function: Information
+  content_types:
+  - grid:2-4
+  - card
+  - heading:h3
+  - paragraph
+  ctas: {}
+  notes: Vorstellung von Standard-Playbooks (Monitoring, Patch-Management, Backup,
+    Inventarisierung).
+- section: OfficeHours
+  page: /kontakt
+  core_function: Information
+  content_types:
+  - text
+  - list
+  ctas: {}
+  notes: "Angabe der Gesch\xE4fts- und Servicezeiten."
+- section: WhatsAppQuickCTA
+  page: /kontakt
+  core_function: Conversion
+  content_types:
+  - button
+  - icon
+  ctas:
+    primary:
+      label: Direkt via WhatsApp schreiben
+      href: https://wa.me/4915565029989
+      type: wa
+  notes: "Prominenter Button f\xFCr direkten WhatsApp-Kontakt."
