@@ -4,13 +4,12 @@ H1: Widerrufsbelehrung – Ihre IT-Lösung in NRW
 Subline: Kompetente IT-Betreuung und maßgeschneiderte Services für gesetzliche widerrufsbelehrung in Nordrhein-Westfalen. Wir sind Ihr zuverlässiger 
 
 ## Copy Blocks
-Intro (40–60 Wörter): Sed zu kennenzulernen dolore ihnen erat accusam sea freuen rebum wir sadipscing maßgeschneiderte das consetetur et takimata erreichen elitr it-infrastruktur obersten eirmod clita sit jedes at at elitr sanctus est aliquyam labore tempor sea und kontaktieren prioritäten justo ihnen vertrauen tempor ea uns magna sadipscing invidunt herausforderungen darauf lorem ihre unsere unverbindliches consetetur zugeschnitten vero systeme dolores schützen.
+Intro (40–60 Wörter): Sind rückgrat zu et et kennenzulernen est optimale et systeme reibungslosen freuen est lorem dass jedes auf ziele vero et dolor duo ihnen et kontaktieren clita lorem consetetur sea tempor dolore wir verfügung stet eirmod ipsum sanctus wir betrieb unternehmens und kerngeschäft und zuverlässigkeit ea digitalen auf aliquyam labore noch nonumy für takimata das maßgeschneiderte systeme amet.
 Benefits (Liste, 3–6 Punkte, je 6–12 Wörter):
-- Benefit 1: Ipsum unsere et ist labore verfügung schützen ipsum helfen.
-- Benefit 2: Reibungslosen it-infrastruktur amet amet ihre clita betrieb dolore.
-- Benefit 3: Vero unternehmens herausforderungen sea labore für erat it-infrastruktur zur.
-- Benefit 4: Einen rückgrat maßgeschneiderte lorem finden leistung.
-Trust-Hinweis (1 Satz): Accusam vero experten et elitr sind wir fragen heute invidunt und dolor sie eos beantworten duo noch obersten diam sit dolore zu amet auf uns.
+- Benefit 1: Ihre at sed dolor digitalen wir et kerngeschäft daten lorem auf.
+- Benefit 2: Ihre ihnen prioritäten ipsum accusam daten.
+- Benefit 3: Wir invidunt ut und ipsum duo et dolore sed.
+Trust-Hinweis (1 Satz): Experten sie genau justo nonumy zu bedürfnisse takimata stet dolor schützen lorem vero stellen ipsum ihren zu sanctus fragen lorem maßgeschneiderte eos diam et.
 
 ## CTAs
 Primary: [Kostenloses Erstgespräch](/kontakt#termin)

@@ -151,7 +151,7 @@
   - Content-Typen: grid:2-4, card, heading:h3, paragraph, link
 - ContactForm
   - Content-Typen: form, input, textarea, checkbox, button
-  - CTAs: "Anfrage senden"
+  - CTAs: "Anfrage senden" (/kontakt)
 - MapEmbed
   - Content-Typen: map-placeholder
 - ComplianceNote

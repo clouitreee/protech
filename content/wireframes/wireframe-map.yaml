@@ -4,12 +4,18 @@ pages:
   route: /
   layout: marketing
   sections:
-  - module: HeroPrimary
-    layout: full-width
-    notes: H1, Subline, 1–2 CTAs; keine Bilder
-  - module: USPGrid
-    layout: container
-    notes: 3–6 kurze Nutzenpunkte
+       - module: HeroPrimary
+         layout: full-width
+         notes: H1, Subline, 1–2 CTAs; keine Bilder
+       - module: ProofBar
+         layout: container
+         notes: Logo-/Badge-Leiste für Trust
+       - module: USPGrid
+         layout: container
+         notes: 3–6 kurze Nutzenpunkte
+       - module: ProblemSolution
+         layout: container
+         notes: 3 Probleme → 3 Lösungen in Cards
   - module: ServiceTeaserGrid
     layout: container
     notes: Cards → Link zu Leistungen
@@ -48,6 +54,12 @@ pages:
   - module: SLAHighlights
     layout: container
     notes: 3 StatItems, DefinitionList
+  - module: OnboardingSteps
+    layout: container
+    notes: 3–5 Schritte vom Start bis Betrieb
+  - module: PlaybooksGrid
+    layout: container
+    notes: Monitoring, Patch, Backup, Inventar
   - module: SecurityNote
     layout: container
     notes: DSGVO, Updates, Backups
@@ -89,7 +101,7 @@ pages:
   - module: RegionMap
     layout: container
     notes: Karte des Servicegebiets
-  - module: SLA/Anfahrt
+  - module: SLAHighlights
     layout: container
     notes: Platzhalter für Modul
   - module: FAQ
@@ -191,6 +203,12 @@ pages:
   - module: ContactForm
     layout: container
     notes: Kontaktformular mit DSGVO-Checkbox
+  - module: OfficeHours
+    layout: container
+    notes: Öffnungszeiten und Erreichbarkeit
+  - module: WhatsAppQuickCTA
+    layout: container
+    notes: Direkter WhatsApp-Kontakt
   - module: MapEmbed
     layout: container
     notes: Eingebettete Karte

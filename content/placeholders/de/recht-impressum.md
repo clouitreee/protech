@@ -4,13 +4,12 @@ H1: Impressum – Ihre IT-Lösung in NRW für Unternehmen
 Subline: Kompetente IT-Betreuung und maßgeschneiderte Services für gesetzliche anbieterkennzeichnung in Nordrhein-Westfalen. Wir sind Ihr zuverlässig
 
 ## Copy Blocks
-Intro (40–60 Wörter): Ihre ea für amet sit helfen zu sit sie daten et wir unverbindliches sadipscing ihre services vor ipsum um takimata zu wir nonumy lorem prioritäten kontaktieren dolor sind voluptua eirmod sie et konzentrieren ipsum gubergren sed et unsere elitr sit.
+Intro (40–60 Wörter): Et est sea betrieb dolor elitr dolor vero digitalen zur zu stehen tempor services eirmod sie maßgeschneiderte elitr nonumy und eos kennenzulernen ipsum rückgrat sed ein und für zuverlässigkeit no et gubergren accusam lösungen eos diam und ipsum beantworten können ut sit et gubergren labore.
 Benefits (Liste, 3–6 Punkte, je 6–12 Wörter):
-- Benefit 1: Et systeme für rebum systeme et justo und bieten.
-- Benefit 2: Diam einen vor clita sit dolores rückgrat ipsum ihre ipsum eirmod.
-- Benefit 3: Diam duo erat vertrauen stehen est beratungsgespräch für ein langjährige.
-- Benefit 4: Ea sicher sed ihnen elitr erat accusam obersten prioritäten justo experten für.
-Trust-Hinweis (1 Satz): Stet no noch dolor ipsum sit services sie wir eirmod für stehen dolore it-infrastruktur unser bedürfnisse systeme duo.
+- Benefit 1: Obersten leistung et et das ihnen vor sorgen sea nonumy.
+- Benefit 2: Gubergren zuverlässigkeit kasd unsere für gubergren noch ipsum schützen fragen.
+- Benefit 3: Auf kontaktieren und uns ziele dolor kennenzulernen no und sit.
+Trust-Hinweis (1 Satz): Zu zu freuen elitr erfahrung unsere it-infrastruktur ihren helfen sind lorem et labore für diam invidunt schützen dolore beratungsgespräch auf und ist gubergren bedürfnisse.
 
 ## CTAs
 Primary: [Kostenloses Erstgespräch](/kontakt#termin)

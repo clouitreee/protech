@@ -1,3 +1,10 @@
+'''
+import yaml
+
+# This script reconstructs the module-intents.yaml file which was malformed due to an incorrect append operation.
+
+# Original content of the file
+original_content = """
 intents:
 - content_types:
   - heading:h1
@@ -626,6 +633,10 @@ intents:
   notes: Platzhalter für den rechtlichen Fließtext.
   page: /recht/widerruf
   section: LegalText
+"""
+
+# Content that was incorrectly appended
+appended_content = """
 - content_types:
   - logo-strip
   - image-placeholder
@@ -693,3 +704,16 @@ intents:
   notes: Direkter WhatsApp-Kontakt-Button
   page: /kontakt
   section: WhatsAppQuickCTA
+"""
+
+data = yaml.safe_load(original_content)
+new_intents = yaml.safe_load(appended_content)
+
+if isinstance(new_intents, list):
+    data['intents'].extend(new_intents)
+
+with open('/home/ubuntu/tech-hilfe-pro-nrw/content/architecture/module-intents.yaml', 'w', encoding='utf-8') as f:
+    yaml.dump(data, f, allow_unicode=True, sort_keys=False)
+
+print("Successfully reconstructed /home/ubuntu/tech-hilfe-pro-nrw/content/architecture/module-intents.yaml")
+'''
