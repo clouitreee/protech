@@ -1,0 +1,21 @@
+{
+  "name": "protech-worker",
+  "compatibility_date": "2025-10-14",
+  "pages_build_output_dir": ".vercel/output/static",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "protech-db",
+      "database_id": "TBD"
+    }
+  ],
+  "env": {
+    "production": {
+      "vars": {}
+    },
+    "preview": {
+      "vars": {}
+    }
+  }
+}
+
