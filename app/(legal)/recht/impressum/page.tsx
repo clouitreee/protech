@@ -38,12 +38,12 @@ export default function ImpressumPage() {
           </p>
 
           {/* TODO: Add remaining legal sections:
-            - Vertretungsberechtigte
-            - Registereintrag
-            - Umsatzsteuer-ID
-            - Verantwortlich für den Inhalt
-            - Streitschlichtung
-            - Haftungsausschluss
+
+
+
+
+
+
           */}
         </div>
       </section>

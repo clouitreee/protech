@@ -1,3 +1,5 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
 # Komponenten-Inventar pro Unterseite
 
 ## / (Startseite)

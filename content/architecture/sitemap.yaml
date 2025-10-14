@@ -56,7 +56,7 @@ routes:
           - question: "Was ist der Unterschied zwischen Managed Services und normalem IT-Support?"
             answer: "Managed Services bedeutet proaktive Betreuung im Abo-Modell, während normaler Support reaktiv bei Problemen hilft."
           - question: "Welche Managed Service Pakete bieten Sie an?"
-            answer: "Wir bieten drei Pakete: Basis (Monitoring & Updates), Professional (inkl. Support) und Premium (Full Service mit SLA)."
+            answer: "Wir bieten drei Pakete: Basis (Monitoring & Updates), Professional (mit Support) und Premium (Full Service mit SLA)."
           - question: "Ist ein langfristiger Vertrag erforderlich?"
             answer: "Unsere Managed Services haben flexible Laufzeiten ab 12 Monaten mit fairer Kündigungsfrist."
           - question: "Was ist in den monatlichen Kosten enthalten?"
@@ -194,7 +194,7 @@ routes:
       - question: "Arbeiten Sie auch mit bestehenden IT-Dienstleistern zusammen?"
         answer: "Ja, wir können als Ergänzung zu Ihrem bestehenden IT-Team oder als vollständiger Ersatz fungieren."
       - question: "Welche Sicherheitsstandards setzen Sie um?"
-        answer: "Wir arbeiten nach aktuellen IT-Sicherheitsstandards inkl. Verschlüsselung, Backup-Strategien und Compliance-Anforderungen."
+        answer: "Wir arbeiten nach aktuellen IT-Sicherheitsstandards einschließlich Verschlüsselung, Backup-Strategien und Compliance-Anforderungen."
 
   - key: contact
     path: "/kontakt"

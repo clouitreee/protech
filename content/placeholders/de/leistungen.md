@@ -1,16 +1,19 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
+
 # Platzhalter – /leistungen
 ## Headings
 H1: Leistungen – Ihre IT-Lösung in NRW für Unternehmen
 Subline: Kompetente IT-Betreuung und maßgeschneiderte Services für übersicht aller services mit pfad zu details in Nordrhein-Westfalen. Wir sind Ihr 
 
 ## Copy Blocks
-Intro (40–60 Wörter): Eirmod stet daten heute herausforderungen amet kontaktieren rebum takimata it-infrastruktur sadipscing erreichen consetetur wir sich unverbindliches helfen eirmod einen rebum sit ut kasd ipsum und fragen bieten zu sie at tempor voluptua et unternehmens und unsere justo unsere sadipscing engagement clita clita sed ziele.
+Intro (40–60 Wörter): Dolor maßgeschneiderte labore sorgen ipsum verfügung das und modernen aliquyam ihr rebum zu und invidunt labore ihnen ist magna beantworten vero amet reibungslosen stehen für justo kennenzulernen ihre und sicherheit uns consetetur sicher voluptua sie und magna est ihren dolores auf leistung kasd sadipscing ihre obersten.
 Benefits (Liste, 3–6 Punkte, je 6–12 Wörter):
-- Benefit 1: Est et sich systeme unverbindliches das genau sadipscing daten dolor diam amet.
-- Benefit 2: Et lorem optimale bedürfnisse digitalen systeme helfen dolore jedes die sit.
-- Benefit 3: Consetetur labore lorem ihre dolor ihre rebum wir und erreichen.
-- Benefit 4: Einen rebum eos voluptua zu sadipscing at beantworten.
-Trust-Hinweis (1 Satz): Sie erat auf kerngeschäft at invidunt lorem sit betrieb est ipsum sie ihre amet diam no clita rückgrat wir dolor ut prioritäten ihnen sanctus.
+- Benefit 1: Erat ipsum elitr sanctus amet nonumy sicher sie erfolg.
+- Benefit 2: Vero unternehmens ea sit ein magna magna ut fragen diam et sie.
+- Benefit 3: Ipsum ihren amet dolores unsere und betrieb dolor.
+- Benefit 4: Consetetur ipsum elitr ihrer stellen vero dolor ipsum um kerngeschäft.
+Trust-Hinweis (1 Satz): Clita eirmod sich prioritäten sicherheit modernen ist vor unternehmens labore amet lorem das bedürfnisse duo verfügung ea systeme herausforderungen.
 
 ## CTAs
 Primary: [Angebot anfordern](/kontakt#angebot)
@@ -18,7 +21,7 @@ Secondary: [Details anfragen](/kontakt#termin)
 Emergency: [Notfall melden](tel:+4915565029989)
 
 ## FAQ (5 Einträge)
-- Frage: Welche IT-Services bieten Sie an? | Antwort: Unser team ist hochqualifiziert und erfahren. alle unsere mitarbeiter verfügen über fundiertes fachwissen und relevante zertifizierungen. durch regelmäßige weiterbildungen stellen wir sicher, dass unser team immer auf dem neuesten stand der technik ist. sie können.
-- Frage: Können Sie auch außerhalb von NRW helfen? | Antwort: Datenschutz hat bei uns höchste priorität. wir halten uns streng an die dsgvo-vorgaben und setzen modernste sicherheitsstandards ein, um ihre daten zu schützen. alle unsere prozesse sind darauf ausgelegt, die vertraulichkeit, integrität und verfügbarkeit ihrer.
+- Frage: Welche IT-Services bieten Sie an? | Antwort: Individuelle lösungen sind unsere stärke. wir wissen, dass jedes unternehmen einzigartig ist und bieten daher keine standardlösungen von der stange. nach einer detaillierten analyse ihrer anforderungen entwickeln wir maßgeschneiderte konzepte, die perfekt zu ihrem geschäftsmodell.
+- Frage: Können Sie auch außerhalb von NRW helfen? | Antwort: Transparente kosten sind garantiert. bei uns gibt es keine versteckten gebühren oder unerwarteten rechnungen. wir legen wert auf eine klare und nachvollziehbare preisgestaltung. vor beginn jeder leistung erhalten sie ein detailliertes angebot, das alle kostenpunkte.
 
 

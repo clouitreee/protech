@@ -131,11 +131,12 @@ def get_ctas_for_page(page_path):
         ctas["secondary"] = {"label": "Jetzt anrufen", "href": "tel:+4915565029989"}
     return ctas
 
-def generate_placeholder_content(page_data):
+def generate_placeholder_content(page_data, module_intents):
     page_path = page_data["path"]
     page_title = page_data["title"]
     page_purpose = page_data["purpose"]
     page_faqs = page_data.get("faqs", [])
+    page_modules = page_data.get("modules", [])
 
     content = f"# Platzhalter – {page_path}\n"
 
@@ -177,11 +178,52 @@ def generate_placeholder_content(page_data):
         content += generate_form_example("Schnellkontakt") + "\n"
     content += "\n"
 
+    # Legal Pricing Note (if applicable)
+    if "PricingTeaser" in page_modules or "PricingTable3" in page_modules:
+        content += "## Legal Pricing Note\n"
+        content += "Alle Preise sind Endpreise. Gemäß §19 UStG erhebe ich keine Umsatzsteuer und weise diese daher auch nicht aus.\n\n"
+
+    # Add placeholders for new modules based on module_intents
+    for module_name in page_modules:
+        if module_name not in ["HeroPrimary", "USPGrid", "ServiceTeaserGrid", "PricingTeaser", "Testimonials", "MiniFAQ", "FinalCTA",
+                               "ServiceCards", "ContextCTA", "BenefitsList", "PricingTable3", "SLAHighlights", "SecurityNote", "FAQ", "CTA",
+                               "EmergencyBanner", "TroubleshootList", "RemoteVsOnsite", "CostTransparency",
+                               "UseCasesGrid", "RegionMap", "HowItWorks3Steps", "ProblemTypesList", "SecurityAssurance",
+                               "MissionValues", "FounderCard", "TeamGrid", "PartnerLogos", "LogoStrip", "CaseSnippets", "TestimonialsGrid",
+                               "PostList", "CategoryFilter", "SidebarCTA", "ContactIntro", "ContactCards", "ContactForm", "MapEmbed", "ComplianceNote", "LegalText"]:
+            # Find the module intent to get content types and notes
+            module_intent = next((item for item in module_intents if item.get('section') == module_name and item.get('page') == page_path), None)
+            if module_intent:
+                content += f"## {module_name}\n"
+                content += f"Notes: {module_intent.get('notes', 'No specific notes provided.')}\n"
+                for ct in module_intent.get('content_types', []):
+                    if 'heading' in ct:
+                        content += f"- {ct.capitalize()}: {generate_heading(module_name)}\n"
+                    elif 'paragraph' in ct:
+                        content += f"- {ct.capitalize()}: {generate_paragraph()}\n"
+                    elif 'list' in ct:
+                        content += f"- {ct.capitalize()}:\n"
+                        for i in range(random.randint(2, 4)):
+                            content += f"  - List Item {i+1}: {generate_paragraph(word_range=(5, 15))}\n"
+                    elif 'card' in ct:
+                        content += f"- {ct.capitalize()}: {generate_paragraph(word_range=(10, 20))}\n"
+                    elif 'button' in ct:
+                        content += f"- {ct.capitalize()}: [{generate_button_label()}]()\n"
+                    elif 'logo-strip' in ct or 'image-placeholder' in ct:
+                        content += f"- {ct.capitalize()}: [Image Placeholder]\n"
+                    else:
+                        content += f"- {ct.capitalize()}: {generate_paragraph(word_range=(10, 20))}\n"
+                content += "\n"
+
     return content
 
-def process_sitemap(sitemap_path, output_dir):
+def process_sitemap(sitemap_path, output_dir, module_intents_path):
     with open(sitemap_path, 'r', encoding='utf-8') as f:
         sitemap = yaml.safe_load(f)
+
+    with open(module_intents_path, 'r', encoding='utf-8') as f:
+        module_intents_data = yaml.safe_load(f)
+        module_intents = module_intents_data.get('intents', []) # Extract the list under 'intents'
 
     os.makedirs(output_dir, exist_ok=True)
 
@@ -190,9 +232,22 @@ def process_sitemap(sitemap_path, output_dir):
         filename_key = route['path'].replace('/', '-').strip('-')
         if not filename_key: # Handle homepage
             filename_key = "home"
+        
+        # Special handling for legal pages to match existing filenames
+        if route['key'] == 'impressum':
+            filename_key = "recht-impressum"
+        elif route['key'] == 'datenschutz':
+            filename_key = "recht-datenschutz"
+        elif route['key'] == 'agb':
+            filename_key = "recht-agb"
+        elif route['key'] == 'widerruf':
+            filename_key = "recht-widerruf"
+        elif route['key'] == 'legal': # For the parent /recht page
+            filename_key = "recht"
+
         filename = os.path.join(output_dir, f"{filename_key}.md")
 
-        placeholder_content = generate_placeholder_content(route)
+        placeholder_content = generate_placeholder_content(route, module_intents)
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(placeholder_content)
         print(f"Generated {filename}")
@@ -206,8 +261,9 @@ def process_sitemap(sitemap_path, output_dir):
 
 # Define paths
 SITEMAP_PATH = "/home/ubuntu/tech-hilfe-pro-nrw/content/architecture/sitemap.yaml"
+MODULE_INTENTS_PATH = "/home/ubuntu/tech-hilfe-pro-nrw/content/architecture/module-intents.yaml"
 OUTPUT_DIR = "/home/ubuntu/tech-hilfe-pro-nrw/content/placeholders/de"
 
 # Process sitemap and generate placeholder files
-process_sitemap(SITEMAP_PATH, OUTPUT_DIR)
+process_sitemap(SITEMAP_PATH, OUTPUT_DIR, MODULE_INTENTS_PATH)
 

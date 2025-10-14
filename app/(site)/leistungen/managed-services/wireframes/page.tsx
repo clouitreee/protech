@@ -26,7 +26,7 @@ export default function ManagedServicesWireframe() {
         <h2>PricingTable3</h2>
         <Placeholder type="grid">
           <Placeholder type="card" label="Paket A: Basis - Monitoring & Updates" />
-          <Placeholder type="card" label="Paket B: Professional - inkl. Support" />
+          <Placeholder type="card" label="Paket B: Professional - mit Support" />
           <Placeholder type="card" label="Paket C: Premium - Full Service mit SLA" />
         </Placeholder>
       </section>

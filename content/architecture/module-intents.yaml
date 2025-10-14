@@ -1,3 +1,5 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
 intents:
 - content_types:
   - heading:h1
@@ -8,13 +10,13 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /leistungen
       label: Leistungen ansehen
       type: link
-  notes: Klarer Nutzen, 1–2 kurze CTAs, kein Bild nötig
+  notes: "Klarer Nutzen, 1\u20132 kurze CTAs, kein Bild n\xF6tig"
   page: /
   section: HeroPrimary
 - content_types:
@@ -24,7 +26,7 @@ intents:
   - paragraph
   core_function: Information
   ctas: {}
-  notes: 3-6 prägnante Nutzenpunkte, Icons und kurze Beschreibungen
+  notes: "3-6 pr\xE4gnante Nutzenpunkte, Icons und kurze Beschreibungen"
   page: /
   section: USPGrid
 - content_types:
@@ -46,7 +48,7 @@ intents:
   - button
   core_function: Information
   ctas: {}
-  notes: Anreiz für Preismodelle, ohne konkrete Preise, weckt Interesse
+  notes: "Anreiz f\xFCr Preismodelle, ohne konkrete Preise, weckt Interesse"
   page: /
   section: PricingTeaser
 - content_types:
@@ -68,7 +70,7 @@ intents:
       href: /kontakt
       label: Weitere Fragen?
       type: link
-  notes: 3-5 häufige Fragen für schnelle Antworten, verlinkt zur FAQ-Seite
+  notes: "3-5 h\xE4ufige Fragen f\xFCr schnelle Antworten, verlinkt zur FAQ-Seite"
   page: /
   section: MiniFAQ
 - content_types:
@@ -96,7 +98,7 @@ intents:
       href: /leistungen
       label: Mehr erfahren
       type: link
-  notes: Übersicht der Dienstleistungen in Kartenform, verlinkt zu Detailseiten
+  notes: "\xDCbersicht der Dienstleistungen in Kartenform, verlinkt zu Detailseiten"
   page: /leistungen
   section: ServiceCards
 - content_types:
@@ -145,7 +147,7 @@ intents:
       href: /kontakt#termin
       label: Details anfragen
       type: link
-  notes: Wichtige SLA-Kennzahlen (Reaktionszeit, Verfügbarkeit)
+  notes: "Wichtige SLA-Kennzahlen (Reaktionszeit, Verf\xFCgbarkeit)"
   page: /leistungen/managed-services
   section: SLAHighlights
 - content_types:
@@ -153,7 +155,7 @@ intents:
   - list
   core_function: Information
   ctas: {}
-  notes: Hinweis auf Sicherheitsmaßnahmen und Compliance
+  notes: "Hinweis auf Sicherheitsma\xDFnahmen und Compliance"
   page: /leistungen/managed-services
   section: SecurityNote
 - content_types:
@@ -166,7 +168,7 @@ intents:
       href: /kontakt
       label: Weitere Fragen?
       type: link
-  notes: Accordion-FAQ mit Schema.org Markup für AEO
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
   page: /leistungen/managed-services
   section: FAQ
 - content_types:
@@ -176,7 +178,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -199,7 +201,7 @@ intents:
       href: https://wa.me/4915565029989
       label: WhatsApp
       type: wa
-  notes: Prominenter Banner für Notfallkontakte
+  notes: "Prominenter Banner f\xFCr Notfallkontakte"
   page: /leistungen/it-support
   section: EmergencyBanner
 - content_types:
@@ -208,7 +210,7 @@ intents:
   - heading:h3
   core_function: Information
   ctas: {}
-  notes: Liste häufiger Probleme, die gelöst werden können
+  notes: "Liste h\xE4ufiger Probleme, die gel\xF6st werden k\xF6nnen"
   page: /leistungen/it-support
   section: TroubleshootList
 - content_types:
@@ -240,7 +242,7 @@ intents:
       href: /kontakt
       label: Weitere Fragen?
       type: link
-  notes: Accordion-FAQ mit Schema.org Markup für AEO
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
   page: /leistungen/it-support
   section: FAQ
 - content_types:
@@ -250,7 +252,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -266,7 +268,7 @@ intents:
   - paragraph
   core_function: Information
   ctas: {}
-  notes: Anwendungsbeispiele für den Service in einem Grid
+  notes: "Anwendungsbeispiele f\xFCr den Service in einem Grid"
   page: /leistungen/vor-ort-service
   section: UseCasesGrid
 - content_types:
@@ -282,7 +284,7 @@ intents:
   ctas: {}
   notes: Details zu Service Level Agreements und Anfahrtskosten
   page: /leistungen/vor-ort-service
-  section: SLA/Anfahrt
+  section: SLAHighlights
 - content_types:
   - accordion/list
   - heading:h3
@@ -293,7 +295,7 @@ intents:
       href: /kontakt
       label: Weitere Fragen?
       type: link
-  notes: Accordion-FAQ mit Schema.org Markup für AEO
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
   page: /leistungen/vor-ort-service
   section: FAQ
 - content_types:
@@ -303,7 +305,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -329,7 +331,7 @@ intents:
   - list
   core_function: Information
   ctas: {}
-  notes: Kategorisierte Liste von remote lösbaren Problemen
+  notes: "Kategorisierte Liste von remote l\xF6sbaren Problemen"
   page: /leistungen/remote-service
   section: ProblemTypesList
 - content_types:
@@ -350,7 +352,7 @@ intents:
       href: /kontakt
       label: Weitere Fragen?
       type: link
-  notes: Accordion-FAQ mit Schema.org Markup für AEO
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
   page: /leistungen/remote-service
   section: FAQ
 - content_types:
@@ -360,7 +362,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -386,7 +388,7 @@ intents:
   - image-placeholder
   core_function: Information
   ctas: {}
-  notes: Vorstellung des Gründers mit Bild und Biografie
+  notes: "Vorstellung des Gr\xFCnders mit Bild und Biografie"
   page: /ueber-uns
   section: FounderCard
 - content_types:
@@ -415,7 +417,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -440,7 +442,7 @@ intents:
   - link
   core_function: Trust
   ctas: {}
-  notes: Kurze Fallstudien-Teaser mit Problem, Lösung, Ergebnis
+  notes: "Kurze Fallstudien-Teaser mit Problem, L\xF6sung, Ergebnis"
   page: /referenzen
   section: CaseSnippets
 - content_types:
@@ -459,7 +461,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -476,7 +478,7 @@ intents:
   - link
   core_function: Information
   ctas: {}
-  notes: Liste von Blog-Beiträgen mit Teasern
+  notes: "Liste von Blog-Beitr\xE4gen mit Teasern"
   page: /blog
   section: PostList
 - content_types:
@@ -484,7 +486,7 @@ intents:
   - button
   core_function: Information
   ctas: {}
-  notes: Filteroptionen für Blog-Kategorien
+  notes: "Filteroptionen f\xFCr Blog-Kategorien"
   page: /blog
   section: CategoryFilter
 - content_types:
@@ -507,7 +509,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -526,7 +528,7 @@ intents:
       href: /kontakt
       label: Weitere Fragen?
       type: link
-  notes: Accordion-FAQ mit Schema.org Markup für AEO
+  notes: "Accordion-FAQ mit Schema.org Markup f\xFCr AEO"
   page: /faq
   section: FAQ
 - content_types:
@@ -536,7 +538,7 @@ intents:
   ctas:
     primary:
       href: /kontakt#termin
-      label: Kostenloses Erstgespräch
+      label: "Kostenloses Erstgespr\xE4ch"
       type: link
     secondary:
       href: /kontakt
@@ -550,7 +552,7 @@ intents:
   - paragraph
   core_function: Information
   ctas: {}
-  notes: Einleitungstext für die Kontaktseite
+  notes: "Einleitungstext f\xFCr die Kontaktseite"
   page: /kontakt
   section: ContactIntro
 - content_types:
@@ -561,7 +563,7 @@ intents:
   - link
   core_function: Information
   ctas: {}
-  notes: Karten mit den verschiedenen Kontaktmöglichkeiten (Telefon, E-Mail, etc.)
+  notes: "Karten mit den verschiedenen Kontaktm\xF6glichkeiten (Telefon, E-Mail, etc.)"
   page: /kontakt
   section: ContactCards
 - content_types:
@@ -583,7 +585,7 @@ intents:
   - map-placeholder
   core_function: Information
   ctas: {}
-  notes: Ein Platzhalter für eine eingebettete Karte.
+  notes: "Ein Platzhalter f\xFCr eine eingebettete Karte."
   page: /kontakt
   section: MapEmbed
 - content_types:
@@ -591,7 +593,7 @@ intents:
   - link
   core_function: Legal
   ctas: {}
-  notes: Ein kurzer Hinweis zur DSGVO-Konformität des Formulars.
+  notes: "Ein kurzer Hinweis zur DSGVO-Konformit\xE4t des Formulars."
   page: /kontakt
   section: ComplianceNote
 - content_types:
@@ -599,7 +601,7 @@ intents:
   - paragraph
   core_function: Legal
   ctas: {}
-  notes: Platzhalter für den rechtlichen Fließtext.
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
   page: /recht/impressum
   section: LegalText
 - content_types:
@@ -607,7 +609,7 @@ intents:
   - paragraph
   core_function: Legal
   ctas: {}
-  notes: Platzhalter für den rechtlichen Fließtext.
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
   page: /recht/datenschutz
   section: LegalText
 - content_types:
@@ -615,7 +617,7 @@ intents:
   - paragraph
   core_function: Legal
   ctas: {}
-  notes: Platzhalter für den rechtlichen Fließtext.
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
   page: /recht/agb
   section: LegalText
 - content_types:
@@ -623,7 +625,7 @@ intents:
   - paragraph
   core_function: Legal
   ctas: {}
-  notes: Platzhalter für den rechtlichen Fließtext.
+  notes: "Platzhalter f\xFCr den rechtlichen Flie\xDFtext."
   page: /recht/widerruf
   section: LegalText
 - content_types:
@@ -641,7 +643,7 @@ intents:
   - paragraph
   core_function: Information
   ctas: {}
-  notes: 3 häufige Probleme und deren Lösungen in Kartenform
+  notes: "3 h\xE4ufige Probleme und deren L\xF6sungen in Kartenform"
   page: /
   section: ProblemSolution
 - content_types:
@@ -661,7 +663,7 @@ intents:
   - paragraph
   core_function: Information
   ctas: {}
-  notes: Übersicht der automatisierten Playbooks (Monitoring, Patching, etc.)
+  notes: "\xDCbersicht der automatisierten Playbooks (Monitoring, Patching, etc.)"
   page: /leistungen/managed-services
   section: PlaybooksGrid
 - content_types:
@@ -671,7 +673,7 @@ intents:
   - paragraph
   core_function: Information
   ctas: {}
-  notes: Auswahlmöglichkeiten für Service Level Agreements (Reaktionszeiten)
+  notes: "Auswahlm\xF6glichkeiten f\xFCr Service Level Agreements (Reaktionszeiten)"
   page: /leistungen/it-support
   section: SLAChooser
 - content_types:
@@ -679,7 +681,7 @@ intents:
   - list
   core_function: Information
   ctas: {}
-  notes: Informationen zu Geschäftszeiten und Erreichbarkeit
+  notes: "Informationen zu Gesch\xE4ftszeiten und Erreichbarkeit"
   page: /kontakt
   section: OfficeHours
 - content_types:
@@ -693,3 +695,81 @@ intents:
   notes: Direkter WhatsApp-Kontakt-Button
   page: /kontakt
   section: WhatsAppQuickCTA
+- content_types:
+  - paragraph
+  - callout/note
+  core_function: Rechtliches
+  ctas: {}
+  notes: "Pflichthinweis gem\xE4\xDF \xA719 UStG (Kleinunternehmerregelung), erscheint\
+    \ unterhalb von Preistabellen"
+  page: /
+  section: LegalPricingNote
+- content_types:
+  - paragraph
+  - callout/note
+  core_function: Rechtliches
+  ctas: {}
+  notes: "Pflichthinweis gem\xE4\xDF \xA719 UStG (Kleinunternehmerregelung), erscheint\
+    \ unterhalb von Preistabellen"
+  page: /leistungen/managed-services
+  section: LegalPricingNote
+- section: ProofBar
+  page: /
+  core_function: Trust
+  content_types:
+  - logo-strip
+  - image-placeholder
+  ctas: {}
+  notes: Logo-Leiste zur Demonstration von Vertrauenssignalen (Zertifikate, Partner).
+- section: ProblemSolution
+  page: /
+  core_function: Information
+  content_types:
+  - grid:3
+  - card
+  - heading:h3
+  - paragraph
+  ctas: {}
+  notes: "Gegen\xFCberstellung von 3 typischen Kundenproblemen und den entsprechenden\
+    \ L\xF6sungen."
+- section: OnboardingSteps
+  page: /leistungen/managed-services
+  core_function: Information
+  content_types:
+  - grid:3-5
+  - card
+  - heading:h3
+  - paragraph
+  ctas: {}
+  notes: Darstellung des Onboarding-Prozesses in 3-5 Schritten.
+- section: PlaybooksGrid
+  page: /leistungen/managed-services
+  core_function: Information
+  content_types:
+  - grid:2-4
+  - card
+  - heading:h3
+  - paragraph
+  ctas: {}
+  notes: Vorstellung von Standard-Playbooks (Monitoring, Patch-Management, Backup,
+    Inventarisierung).
+- section: OfficeHours
+  page: /kontakt
+  core_function: Information
+  content_types:
+  - text
+  - list
+  ctas: {}
+  notes: "Angabe der Gesch\xE4fts- und Servicezeiten."
+- section: WhatsAppQuickCTA
+  page: /kontakt
+  core_function: Conversion
+  content_types:
+  - button
+  - icon
+  ctas:
+    primary:
+      label: Direkt via WhatsApp schreiben
+      href: https://wa.me/4915565029989
+      type: wa
+  notes: "Prominenter Button f\xFCr direkten WhatsApp-Kontakt."

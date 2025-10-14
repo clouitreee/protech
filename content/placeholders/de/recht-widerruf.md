@@ -1,15 +1,19 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
+
 # Platzhalter – /recht/widerruf
 ## Headings
 H1: Widerrufsbelehrung – Ihre IT-Lösung in NRW
 Subline: Kompetente IT-Betreuung und maßgeschneiderte Services für gesetzliche widerrufsbelehrung in Nordrhein-Westfalen. Wir sind Ihr zuverlässiger 
 
 ## Copy Blocks
-Intro (40–60 Wörter): Sind rückgrat zu et et kennenzulernen est optimale et systeme reibungslosen freuen est lorem dass jedes auf ziele vero et dolor duo ihnen et kontaktieren clita lorem consetetur sea tempor dolore wir verfügung stet eirmod ipsum sanctus wir betrieb unternehmens und kerngeschäft und zuverlässigkeit ea digitalen auf aliquyam labore noch nonumy für takimata das maßgeschneiderte systeme amet.
+Intro (40–60 Wörter): Kennenzulernen ipsum rückgrat wir erfolg ea et invidunt sit für schützen clita it-infrastruktur sie dolores lorem ihnen lorem sed dolor lorem sorgen sadipscing jederzeit sanctus erreichen justo ipsum kasd eos gubergren dolor ein sed zu sea für ihre auf dolores zugeschnitten duo und verfügung wir uns et stet wir stellen ut fragen takimata sed et ist digitalen für sadipscing.
 Benefits (Liste, 3–6 Punkte, je 6–12 Wörter):
-- Benefit 1: Ihre at sed dolor digitalen wir et kerngeschäft daten lorem auf.
-- Benefit 2: Ihre ihnen prioritäten ipsum accusam daten.
-- Benefit 3: Wir invidunt ut und ipsum duo et dolore sed.
-Trust-Hinweis (1 Satz): Experten sie genau justo nonumy zu bedürfnisse takimata stet dolor schützen lorem vero stellen ipsum ihren zu sanctus fragen lorem maßgeschneiderte eos diam et.
+- Benefit 1: Sed voluptua langjährige systeme bedürfnisse ihren tempor.
+- Benefit 2: Auf ihrer magna rebum at herausforderungen et rebum darauf et.
+- Benefit 3: Wir amet optimale lorem stet sit das verfügung beantworten zu nonumy eirmod.
+- Benefit 4: Dolores erat bedürfnisse justo diam rückgrat lorem.
+Trust-Hinweis (1 Satz): Uns prioritäten auf unser eirmod unverbindliches ipsum eos dolores engagement erat stehen ihre einen und ipsum bieten aliquyam.
 
 ## CTAs
 Primary: [Kostenloses Erstgespräch](/kontakt#termin)

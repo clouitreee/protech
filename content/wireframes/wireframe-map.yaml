@@ -1,3 +1,5 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
 version: 1
 pages:
 - key: home
@@ -22,6 +24,9 @@ pages:
   - module: PricingTeaser
     layout: container
     notes: 3 Pakete als Teaser, keine Preise hart
+  - module: LegalPricingNote
+    layout: container
+    notes: §19 UStG Pflichthinweis
   - module: Testimonials
     layout: container
     notes: Zitatliste kurz
@@ -51,6 +56,9 @@ pages:
   - module: PricingTable3
     layout: container
     notes: 3 Pakete, Featureliste, CTA
+  - module: LegalPricingNote
+    layout: container
+    notes: §19 UStG Pflichthinweis
   - module: SLAHighlights
     layout: container
     notes: 3 StatItems, DefinitionList

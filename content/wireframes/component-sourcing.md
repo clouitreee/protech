@@ -1,3 +1,5 @@
+# This file was generated and/or modified by Manus AI.
+# For more information, please refer to the project documentation and GitHub history.
 # Component Sourcing Recommendations
 
 This document provides recommendations for sourcing or implementing each modular UI component.
@@ -214,16 +216,6 @@ This document provides recommendations for sourcing or implementing each modular
 - **UI Library:** Consider using a component library like **Chakra UI** or **Headless UI** with **Tailwind CSS** for a good balance of pre-built components and customization options.
 - **Implementation Notes:**
   - For maps, consider using **React Leaflet** or **Google Maps React**.
-  - General components like `Heading`, `Paragraph`, `Button`, `Card`, and `Grid` can be custom-built with Tailwind CSS for maximum design control.
-
-## SLA/Anfahrt
-
-**Content Types:** `{}`
-
-**Recommendations:**
-
-- **UI Library:** Consider using a component library like **Chakra UI** or **Headless UI** with **Tailwind CSS** for a good balance of pre-built components and customization options.
-- **Implementation Notes:**
   - General components like `Heading`, `Paragraph`, `Button`, `Card`, and `Grid` can be custom-built with Tailwind CSS for maximum design control.
 
 ## HowItWorks3Steps
@@ -443,7 +435,7 @@ This document provides recommendations for sourcing or implementing each modular
 
 ## OnboardingSteps
 
-**Content Types:** `{list, list-item, heading:h3, paragraph}`
+**Content Types:** `{list, list-item, heading:h3, paragraph, grid:3-5, card}`
 
 **Recommendations:**
 
@@ -473,7 +465,7 @@ This document provides recommendations for sourcing or implementing each modular
 
 ## OfficeHours
 
-**Content Types:** `{paragraph, list}`
+**Content Types:** `{paragraph, list, text}`
 
 **Recommendations:**
 
@@ -483,7 +475,17 @@ This document provides recommendations for sourcing or implementing each modular
 
 ## WhatsAppQuickCTA
 
-**Content Types:** `{button}`
+**Content Types:** `{button, icon}`
+
+**Recommendations:**
+
+- **UI Library:** Consider using a component library like **Chakra UI** or **Headless UI** with **Tailwind CSS** for a good balance of pre-built components and customization options.
+- **Implementation Notes:**
+  - General components like `Heading`, `Paragraph`, `Button`, `Card`, and `Grid` can be custom-built with Tailwind CSS for maximum design control.
+
+## LegalPricingNote
+
+**Content Types:** `{paragraph, callout/note}`
 
 **Recommendations:**
 
