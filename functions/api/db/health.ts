@@ -28,18 +28,21 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     }
 
     // Simple query to test database connectivity
-    const result = await DB.prepare('SELECT 1 as health_check').first();
+    const result = await DB.prepare('SELECT 1 as ok').first();
 
-    if (result && result.health_check === 1) {
+    if (result && result.ok === 1) {
       return new Response(
         JSON.stringify({
           status: 'ok',
-          message: 'Database connection successful',
+          db: 'connected',
           timestamp: new Date().toISOString(),
         }),
         {
           status: 200,
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 
+            'Content-Type': 'application/json',
+            'Cache-Control': 'no-store'
+          },
         }
       );
     }

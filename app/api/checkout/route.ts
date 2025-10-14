@@ -14,22 +14,50 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2024-12-18.acacia',
 });
 
+// Whitelist of allowed price IDs (configure based on your Stripe products)
+const ALLOWED_PRICE_IDS = [
+  // Add your Stripe price IDs here
+  // Example: 'price_1234567890abcdef'
+];
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { priceId, quantity = 1, customerEmail, successUrl, cancelUrl } = body;
+    const { priceId, quantity = 1, customerEmail, mode = 'payment' } = body;
 
     // Validation
-    if (!priceId) {
+    if (!priceId || typeof priceId !== 'string') {
       return NextResponse.json(
-        { error: 'Price ID is required' },
+        { error: 'Valid Price ID is required' },
         { status: 400 }
       );
     }
 
-    if (!customerEmail) {
+    // Validate priceId against whitelist (if configured)
+    if (ALLOWED_PRICE_IDS.length > 0 && !ALLOWED_PRICE_IDS.includes(priceId)) {
       return NextResponse.json(
-        { error: 'Customer email is required' },
+        { error: 'Invalid Price ID' },
+        { status: 400 }
+      );
+    }
+
+    if (!customerEmail || typeof customerEmail !== 'string') {
+      return NextResponse.json(
+        { error: 'Valid customer email is required' },
+        { status: 400 }
+      );
+    }
+
+    if (typeof quantity !== 'number' || quantity < 1) {
+      return NextResponse.json(
+        { error: 'Quantity must be at least 1' },
+        { status: 400 }
+      );
+    }
+
+    if (mode !== 'payment' && mode !== 'subscription') {
+      return NextResponse.json(
+        { error: 'Mode must be "payment" or "subscription"' },
         { status: 400 }
       );
     }
@@ -38,7 +66,7 @@ export async function POST(request: NextRequest) {
 
     // Create Checkout Session
     const session = await stripe.checkout.sessions.create({
-      mode: 'payment',
+      mode: mode as 'payment' | 'subscription',
       customer_email: customerEmail,
       line_items: [
         {
@@ -46,8 +74,8 @@ export async function POST(request: NextRequest) {
           quantity,
         },
       ],
-      success_url: successUrl || `${appUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: cancelUrl || `${appUrl}/cancel`,
+      success_url: `${appUrl}/success?cs_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${appUrl}/cancel`,
       // §19 UStG notice - no VAT charged
       custom_text: {
         submit: {
@@ -68,15 +96,9 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Stripe Checkout Session creation error:', error);
 
-    if (error instanceof Stripe.errors.StripeError) {
-      return NextResponse.json(
-        { error: error.message },
-        { status: error.statusCode || 500 }
-      );
-    }
-
+    // Generic error response to avoid leaking sensitive information
     return NextResponse.json(
-      { error: 'Failed to create checkout session' },
+      { error: 'Failed to create checkout session. Please try again later.' },
       { status: 500 }
     );
   }
