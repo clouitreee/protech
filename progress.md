@@ -35,3 +35,43 @@
 
 ```
 
+
+
+## 2025-10-14 - PR #10: CI Gates Implementation
+
+**Aus dem aktuellen Stand folgend:** Die serverseitigen Routen für Checkout und Kontakt wurden in PR #9 finalisiert. Dieser Schritt konzentriert sich auf die Implementierung von CI Gates (Lint/Typecheck, A11y-Linter, Prettier, Smoke Tests) zur Sicherstellung der Code-Qualität und Barrierefreiheit.
+
+**Baut auf:**
+- PR #7: `feat(integrations): scaffold CF Pages+D1, Stripe Checkout, Resend; add §19 note & compliance docs`
+- PR #8: `feat(ui): add hifi wireframes and component map`
+- PR #9: `feat(integrations): finalize checkout+contact (test mode) & update docs`
+
+**Ziel dieses Schritts:** CI Gates aktivieren, um Fehler früh zu erkennen und Code-Qualität, TypeScript-Typsicherheit, Formatierung und Barrierefreiheit zu gewährleisten.
+
+### Erledigt:
+
+-   **package.json erstellt:** Alle notwendigen Dependencies (Next.js, React, Stripe, Resend) und DevDependencies (ESLint, Prettier, Playwright, TypeScript) wurden hinzugefügt.
+-   **TypeScript-Konfiguration (tsconfig.json):** Strikte TypeScript-Konfiguration mit Next.js-Integration.
+-   **ESLint-Konfiguration (.eslintrc.json):** ESLint mit `jsx-a11y`-Plugin für Barrierefreiheitsprüfungen konfiguriert.
+-   **Prettier-Konfiguration (.prettierrc, .prettierignore):** Code-Formatierung mit konsistenten Regeln.
+-   **Playwright-Konfiguration (playwright.config.ts):** Smoke Tests für Health, Checkout und Contact-Endpoints.
+-   **Smoke Tests implementiert:**
+    -   `tests/health.spec.ts`: Prüft DB Health Endpoint (200 OK, Cache-Control: no-store).
+    -   `tests/checkout.spec.ts`: Prüft Stripe Checkout Session-Erstellung und Validierung.
+    -   `tests/contact.spec.ts`: Prüft Contact Form mit Honeypot, Time-trap und Rate-Limiting.
+-   **GitHub Actions CI Workflow (.github/workflows/ci.yml):** Automatisierte Prüfungen bei Push und Pull Requests (Lint, Typecheck, Format, A11y, Smoke Tests).
+-   **Next.js-Konfiguration (next.config.js):** Basis-Konfiguration für Next.js mit ESLint-Integration.
+
+### Offen:
+
+-   Keine offenen Punkte für diesen Schritt.
+
+### Risiken:
+
+-   Smoke Tests erfordern eine laufende Next.js-Instanz. In CI wird dies durch `webServer` in `playwright.config.ts` gelöst.
+
+### PR-Links:
+
+-   [PR #10: feat(ci): implement CI gates (lint, typecheck, a11y, prettier, smoke tests)](https://github.com/clouitreee/protech/pull/10) (wird erstellt)
+
+
