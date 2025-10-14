@@ -1,212 +1,182 @@
 # Komponenten-Inventar pro Unterseite
 
-## /
+## / (Startseite)
 **Module & UI-Komponenten**
 - HeroPrimary
-  - Komponenten: Heading(h1), Paragraph, ButtonGroup, Badge
-  - Platzhalter: "Haupt-Nutzenversprechen, unterstützender Text, primärer und sekundärer CTA."
+  - Content-Typen: heading:h1, paragraph:subline, buttons:primary,secondary, badges:optional
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Leistungen ansehen" (/leistungen)
 - USPGrid
-  - Komponenten: Grid(3-6), Card, Heading(h3), Paragraph
-  - Platzhalter: "Drei bis sechs Nutzenpunkte mit kurzen, prägnanten Labels und Beschreibungen."
+  - Content-Typen: grid:3-6, card, heading:h3, paragraph
 - ServiceTeaserGrid
-  - Komponenten: Grid(3-4), Card, Heading(h3), Paragraph, Link
-  - Platzhalter: "Karten mit Links zu den Hauptleistungsseiten, jeweils mit Titel und kurzer Beschreibung."
+  - Content-Typen: grid:3-4, card, heading:h3, paragraph, link
 - PricingTeaser
-  - Komponenten: Grid(3), Card, Heading(h3), List, Button
-  - Platzhalter: "Teaser für drei Preispakete, ohne konkrete Preise, nur um Interesse zu wecken."
+  - Content-Typen: grid:3, card, heading:h3, list, button
 - Testimonials
-  - Komponenten: Carousel/Grid, Blockquote, Cite
-  - Platzhalter: "Ein bis drei kurze Zitate von Kunden, um Vertrauen aufzubauen."
+  - Content-Typen: carousel/grid, blockquote, cite
 - MiniFAQ
-  - Komponenten: Accordion/List, Heading(h3), Paragraph
-  - Platzhalter: "Drei bis fünf der häufigsten Fragen als Platzhalter, um erste Unklarheiten zu beseitigen."
+  - Content-Typen: accordion/list, heading:h3, paragraph
+  - CTAs: "Weitere Fragen?" (/kontakt)
 - FinalCTA
-  - Komponenten: Heading(h2), Paragraph, ButtonGroup
-  - Platzhalter: "Abschließender Call-to-Action mit Fokus auf Kontaktaufnahme und Erstgespräch."
+  - Content-Typen: heading:h2, paragraph, buttons:primary,secondary
+  - CTAs: "Kontakt aufnehmen" (/kontakt)
 
-## /leistungen
+## /leistungen (Leistungen)
 **Module & UI-Komponenten**
 - ServiceCards
-  - Komponenten: Grid(2-4), Card, Heading(h3), Paragraph, Link
-  - Platzhalter: "Übersicht der angebotenen Dienstleistungen in Kartenform, die zu den Detailseiten verlinken."
+  - Content-Typen: grid:2-4, card, heading:h3, paragraph, link
+  - CTAs: "Mehr erfahren" (/leistungen)
 - ContextCTA
-  - Komponenten: Callout/Banner, Paragraph, Button
-  - Platzhalter: "Ein kontextbezogener Call-to-Action, der an passender Stelle im Inhalt platziert wird."
+  - Content-Typen: callout/banner, paragraph, button
+  - CTAs: "Jetzt beraten lassen" (/kontakt)
 
-## /leistungen/managed-services
+## /leistungen/managed-services (Managed IT-Services)
 **Module & UI-Komponenten**
 - BenefitsList
-  - Komponenten: List, ListItem, Heading(h3), Paragraph
-  - Platzhalter: "3 Kernvorteile in 1 Zeile, Kurzbeschreibungen 12–20 Wörter"
+  - Content-Typen: list, list-item, heading:h3, paragraph
 - PricingTable3
-  - Komponenten: Grid(3), Card, Heading(h3), FeatureList, Button(Primary)
-  - Platzhalter: "Paket A/B/C, Feature 1–6, CTA: Angebot anfordern"
+  - Content-Typen: grid:3, card, feature-list, button
+  - CTAs: "Angebot anfordern" (/kontakt#angebot)
 - SLAHighlights
-  - Komponenten: StatItems(3), DefinitionList
-  - Platzhalter: "Reaktionszeit, Monitoring, Ticketportal"
+  - Content-Typen: stat-items:3, definition-list
+  - CTAs: "Details anfragen" (/kontakt#termin)
 - SecurityNote
-  - Komponenten: Callout/Note, List
-  - Platzhalter: "DSGVO-konform, Updates, Backups"
+  - Content-Typen: callout/note, list
 - FAQ
-  - Komponenten: Accordion/List, Heading(h3), Paragraph
-  - Platzhalter: "Frage 1–5, Antwort in 1–2 Sätzen"
+  - Content-Typen: accordion/list, heading:h3, paragraph
+  - CTAs: "Weitere Fragen?" (/kontakt)
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /leistungen/it-support
+## /leistungen/it-support (IT-Support (Break/Fix))
 **Module & UI-Komponenten**
 - EmergencyBanner
-  - Komponenten: Banner, Heading(h2), ButtonGroup
-  - Platzhalter: "Ein auffälliger Banner für Notfälle mit direkten Kontaktmöglichkeiten."
+  - Content-Typen: banner, heading:h2, buttons:primary,secondary
+  - CTAs: "Notfall melden" (tel:+4915565029989), "WhatsApp" (https://wa.me/4915565029989)
 - TroubleshootList
-  - Komponenten: List, ListItem, Heading(h3)
-  - Platzhalter: "Eine Liste von häufigen Problemen, die durch den Service gelöst werden können."
+  - Content-Typen: list, list-item, heading:h3
 - RemoteVsOnsite
-  - Komponenten: Grid(2), Card, Heading(h3), List
-  - Platzhalter: "Ein Vergleich der Vor- und Nachteile von Remote- und Vor-Ort-Service."
+  - Content-Typen: grid:2, card, heading:h3, list
 - CostTransparency
-  - Komponenten: Table/Grid, Heading(h3), Paragraph
-  - Platzhalter: "Eine transparente Darstellung der Kostenstruktur und was darin enthalten ist."
+  - Content-Typen: table/grid, heading:h3, paragraph
 - FAQ
-  - Komponenten: Accordion/List, Heading(h3), Paragraph
-  - Platzhalter: "Frage 1–5, Antwort in 1–2 Sätzen"
+  - Content-Typen: accordion/list, heading:h3, paragraph
+  - CTAs: "Weitere Fragen?" (/kontakt)
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /leistungen/vor-ort-service
+## /leistungen/vor-ort-service (IT-Service vor Ort)
 **Module & UI-Komponenten**
 - UseCasesGrid
-  - Komponenten: Grid(2-3), Card, Heading(h3), Paragraph
-  - Platzhalter: "Eine Darstellung von typischen Anwendungsfällen für den Service in einem Grid-Layout."
+  - Content-Typen: grid:2-3, card, heading:h3, paragraph
 - RegionMap
-  - Komponenten: MapPlaceholder, List
-  - Platzhalter: "Eine Platzhalter-Karte, die das Servicegebiet visualisiert."
+  - Content-Typen: map-placeholder, list
 - SLA/Anfahrt
-  - Komponenten: Komponente nicht definiert
-  - Platzhalter: "Platzhaltertext nicht definiert"
 - FAQ
-  - Komponenten: Accordion/List, Heading(h3), Paragraph
-  - Platzhalter: "Frage 1–5, Antwort in 1–2 Sätzen"
+  - Content-Typen: accordion/list, heading:h3, paragraph
+  - CTAs: "Weitere Fragen?" (/kontakt)
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /leistungen/remote-service
+## /leistungen/remote-service (Remote-Service)
 **Module & UI-Komponenten**
 - HowItWorks3Steps
-  - Komponenten: Grid(3), Card, Heading(h3), Paragraph
-  - Platzhalter: "Eine einfache Darstellung des Service-Prozesses in drei Schritten."
+  - Content-Typen: grid:3, card, heading:h3, paragraph
 - ProblemTypesList
-  - Komponenten: Grid(2-3), Card, Heading(h3), List
-  - Platzhalter: "Eine Liste der Problemtypen, die remote gelöst werden können."
+  - Content-Typen: grid:2-3, card, heading:h3, list
 - SecurityAssurance
-  - Komponenten: Callout/Note, List
-  - Platzhalter: "Ein Hinweis auf die Sicherheitsmaßnahmen und -standards."
+  - Content-Typen: callout/note, list
 - FAQ
-  - Komponenten: Accordion/List, Heading(h3), Paragraph
-  - Platzhalter: "Frage 1–5, Antwort in 1–2 Sätzen"
+  - Content-Typen: accordion/list, heading:h3, paragraph
+  - CTAs: "Weitere Fragen?" (/kontakt)
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /ueber-uns
+## /ueber-uns (Über uns)
 **Module & UI-Komponenten**
 - MissionValues
-  - Komponenten: Grid(2), Card, Heading(h2), Paragraph
-  - Platzhalter: "Darstellung der Unternehmensmission und der Kernwerte."
+  - Content-Typen: grid:2, card, heading:h2, paragraph
 - FounderCard
-  - Komponenten: Card, Heading(h3), Paragraph, ImagePlaceholder
-  - Platzhalter: "Eine Karte zur Vorstellung des Gründers mit Bild und kurzer Biografie."
+  - Content-Typen: card, heading:h3, paragraph, image-placeholder
 - TeamGrid
-  - Komponenten: Grid(2-4), Card, Heading(h3), Paragraph, ImagePlaceholder
-  - Platzhalter: "Ein Grid zur Vorstellung der Teammitglieder."
+  - Content-Typen: grid:2-4, card, heading:h3, paragraph, image-placeholder
 - PartnerLogos
-  - Komponenten: LogoStrip, ImagePlaceholder
-  - Platzhalter: "Eine Leiste mit den Logos von Technologiepartnern."
+  - Content-Typen: logo-strip, image-placeholder
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /referenzen
+## /referenzen (Referenzen / Kundenstimmen)
 **Module & UI-Komponenten**
 - LogoStrip
-  - Komponenten: LogoStrip, ImagePlaceholder
-  - Platzhalter: "Eine Leiste mit den Logos von Kunden oder Partnern."
+  - Content-Typen: logo-strip, image-placeholder
 - CaseSnippets
-  - Komponenten: Grid(2-3), Card, Heading(h3), Paragraph, Link
-  - Platzhalter: "Kurze Teaser für Fallstudien mit Problem, Lösung und Ergebnis."
+  - Content-Typen: grid:2-3, card, heading:h3, paragraph, link
 - TestimonialsGrid
-  - Komponenten: Grid(2-3), Blockquote, Cite
-  - Platzhalter: "Ein Grid mit mehreren Kundenstimmen."
+  - Content-Typen: grid:2-3, blockquote, cite
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /blog
+## /blog (Wissenscenter / Blog)
 **Module & UI-Komponenten**
 - PostList
-  - Komponenten: Grid(1-3), Card, Heading(h3), Paragraph, Link
-  - Platzhalter: "Eine Liste von Blog-Beiträgen mit Teasern."
+  - Content-Typen: grid:1-3, card, heading:h3, paragraph, link
 - CategoryFilter
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Filter-Buttons für die Blog-Kategorien."
+  - Content-Typen: button-group, button
 - SidebarCTA
-  - Komponenten: Card, Heading(h3), Button
-  - Platzhalter: "Ein Call-to-Action in der Seitenleiste, z.B. für Newsletter-Anmeldung."
+  - Content-Typen: card, heading:h3, button
+  - CTAs: "Jetzt abonnieren" (#newsletter)
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /faq
+## /faq (FAQ)
 **Module & UI-Komponenten**
 - FAQ
-  - Komponenten: Accordion/List, Heading(h3), Paragraph
-  - Platzhalter: "Frage 1–5, Antwort in 1–2 Sätzen"
+  - Content-Typen: accordion/list, heading:h3, paragraph
+  - CTAs: "Weitere Fragen?" (/kontakt)
 - CTA
-  - Komponenten: ButtonGroup, Button
-  - Platzhalter: "Buttons: Erstgespräch, Kontakt"
+  - Content-Typen: button-group, button
+  - CTAs: "Kostenloses Erstgespräch" (/kontakt#termin), "Kontakt aufnehmen" (/kontakt)
 
-## /kontakt
+## /kontakt (Kontakt)
 **Module & UI-Komponenten**
 - ContactIntro
-  - Komponenten: Heading(h1), Paragraph
-  - Platzhalter: "Einleitungstext für die Kontaktseite."
+  - Content-Typen: heading:h1, paragraph
 - ContactCards
-  - Komponenten: Grid(2-4), Card, Heading(h3), Paragraph, Link
-  - Platzhalter: "Karten mit den verschiedenen Kontaktmöglichkeiten (Telefon, E-Mail, etc.)."
+  - Content-Typen: grid:2-4, card, heading:h3, paragraph, link
 - ContactForm
-  - Komponenten: Form, Input, Textarea, Checkbox, Button
-  - Platzhalter: "Ein Kontaktformular mit den notwendigen Feldern und DSGVO-Checkbox."
+  - Content-Typen: form, input, textarea, checkbox, button
+  - CTAs: "Anfrage senden"
 - MapEmbed
-  - Komponenten: MapPlaceholder
-  - Platzhalter: "Ein Platzhalter für eine eingebettete Karte."
+  - Content-Typen: map-placeholder
 - ComplianceNote
-  - Komponenten: Paragraph, Link
-  - Platzhalter: "Ein kurzer Hinweis zur DSGVO-Konformität des Formulars."
+  - Content-Typen: paragraph, link
 
-## /recht/impressum
+## /recht (Rechtliches)
+**Module & UI-Komponenten**
+
+## /recht/impressum (Impressum)
 **Module & UI-Komponenten**
 - LegalText
-  - Komponenten: Heading(h2), Paragraph
-  - Platzhalter: "Platzhalter für den rechtlichen Fließtext."
+  - Content-Typen: heading:h2, paragraph
 
-## /recht/datenschutz
+## /recht/datenschutz (Datenschutz)
 **Module & UI-Komponenten**
 - LegalText
-  - Komponenten: Heading(h2), Paragraph
-  - Platzhalter: "Platzhalter für den rechtlichen Fließtext."
+  - Content-Typen: heading:h2, paragraph
 
-## /recht/agb
+## /recht/agb (AGB)
 **Module & UI-Komponenten**
 - LegalText
-  - Komponenten: Heading(h2), Paragraph
-  - Platzhalter: "Platzhalter für den rechtlichen Fließtext."
+  - Content-Typen: heading:h2, paragraph
 
-## /recht/widerruf
+## /recht/widerruf (Widerrufsbelehrung)
 **Module & UI-Komponenten**
 - LegalText
-  - Komponenten: Heading(h2), Paragraph
-  - Platzhalter: "Platzhalter für den rechtlichen Fließtext."
+  - Content-Typen: heading:h2, paragraph
 
