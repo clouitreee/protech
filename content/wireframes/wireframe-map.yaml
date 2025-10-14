@@ -1,0 +1,234 @@
+version: 1
+pages:
+- key: home
+  route: /
+  layout: marketing
+  sections:
+  - module: HeroPrimary
+    layout: full-width
+    notes: H1, Subline, 1–2 CTAs; keine Bilder
+  - module: USPGrid
+    layout: container
+    notes: 3–6 kurze Nutzenpunkte
+  - module: ServiceTeaserGrid
+    layout: container
+    notes: Cards → Link zu Leistungen
+  - module: PricingTeaser
+    layout: container
+    notes: 3 Pakete als Teaser, keine Preise hart
+  - module: Testimonials
+    layout: container
+    notes: Zitatliste kurz
+  - module: MiniFAQ
+    layout: container
+    notes: 5 häufige Fragen (Platzhalter)
+  - module: FinalCTA
+    layout: container
+    notes: Kontakt + Erstgespräch
+- key: services
+  route: /leistungen
+  layout: default
+  sections:
+  - module: ServiceCards
+    layout: container
+    notes: Übersicht der Services mit Links zu Details
+  - module: ContextCTA
+    layout: container
+    notes: Kontextbezogener Call-to-Action
+- key: managed_services
+  route: /leistungen/managed-services
+  layout: default
+  sections:
+  - module: BenefitsList
+    layout: container
+    notes: 3 Vorteile, je 1 Zeile, kurze Beschreibung
+  - module: PricingTable3
+    layout: container
+    notes: 3 Pakete, Featureliste, CTA
+  - module: SLAHighlights
+    layout: container
+    notes: 3 StatItems, DefinitionList
+  - module: SecurityNote
+    layout: container
+    notes: DSGVO, Updates, Backups
+  - module: FAQ
+    layout: container
+    notes: 5 Fragen als Accordion/List
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: it_support
+  route: /leistungen/it-support
+  layout: default
+  sections:
+  - module: EmergencyBanner
+    layout: full-width
+    notes: Notfall-Kontaktbanner (Tel/WA)
+  - module: TroubleshootList
+    layout: container
+    notes: Liste häufiger Probleme
+  - module: RemoteVsOnsite
+    layout: container
+    notes: Vergleich Remote vs. Vor-Ort
+  - module: CostTransparency
+    layout: container
+    notes: Transparente Kostenübersicht
+  - module: FAQ
+    layout: container
+    notes: 5 Fragen als Accordion/List
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: onsite
+  route: /leistungen/vor-ort-service
+  layout: default
+  sections:
+  - module: UseCasesGrid
+    layout: container
+    notes: Anwendungsfälle im Grid
+  - module: RegionMap
+    layout: container
+    notes: Karte des Servicegebiets
+  - module: SLA/Anfahrt
+    layout: container
+    notes: Platzhalter für Modul
+  - module: FAQ
+    layout: container
+    notes: 5 Fragen als Accordion/List
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: remote
+  route: /leistungen/remote-service
+  layout: default
+  sections:
+  - module: HowItWorks3Steps
+    layout: container
+    notes: 3 Schritte zum Service
+  - module: ProblemTypesList
+    layout: container
+    notes: Liste der Problemtypen
+  - module: SecurityAssurance
+    layout: container
+    notes: Sicherheitszusicherung
+  - module: FAQ
+    layout: container
+    notes: 5 Fragen als Accordion/List
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: about
+  route: /ueber-uns
+  layout: default
+  sections:
+  - module: MissionValues
+    layout: container
+    notes: Mission und Werte des Unternehmens
+  - module: FounderCard
+    layout: container
+    notes: Gründerprofil mit Bild und Text
+  - module: TeamGrid
+    layout: container
+    notes: Teammitglieder im Grid
+  - module: PartnerLogos
+    layout: container
+    notes: Logos von Partnern/Kunden
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: references
+  route: /referenzen
+  layout: default
+  sections:
+  - module: LogoStrip
+    layout: container
+    notes: Logos von Kunden/Partnern
+  - module: CaseSnippets
+    layout: container
+    notes: Kurze Fallstudien-Teaser
+  - module: TestimonialsGrid
+    layout: container
+    notes: Kundenstimmen im Grid
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: blog
+  route: /blog
+  layout: default
+  sections:
+  - module: PostList
+    layout: container
+    notes: Blogbeiträge mit Teasern
+  - module: CategoryFilter
+    layout: container
+    notes: Filter für Blogkategorien
+  - module: SidebarCTA
+    layout: container
+    notes: Seitenleisten-CTA
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: faq
+  route: /faq
+  layout: default
+  sections:
+  - module: FAQ
+    layout: container
+    notes: 5 Fragen als Accordion/List
+  - module: CTA
+    layout: container
+    notes: Platzhalter für Modul
+- key: contact
+  route: /kontakt
+  layout: default
+  sections:
+  - module: ContactIntro
+    layout: container
+    notes: Einleitungstext Kontaktseite
+  - module: ContactCards
+    layout: container
+    notes: Kontaktmöglichkeiten (Tel, Mail, WA)
+  - module: ContactForm
+    layout: container
+    notes: Kontaktformular mit DSGVO-Checkbox
+  - module: MapEmbed
+    layout: container
+    notes: Eingebettete Karte
+  - module: ComplianceNote
+    layout: container
+    notes: DSGVO-Hinweis
+- key: legal
+  route: /recht
+  layout: narrow
+  sections:
+  - module: LegalText
+    layout: narrow
+    notes: Rechtlicher Text (Impressum, Datenschutz)
+- key: impressum
+  route: /recht/impressum
+  layout: narrow
+  sections:
+  - module: LegalText
+    layout: narrow
+    notes: Rechtlicher Text (Impressum, Datenschutz)
+- key: datenschutz
+  route: /recht/datenschutz
+  layout: narrow
+  sections:
+  - module: LegalText
+    layout: narrow
+    notes: Rechtlicher Text (Impressum, Datenschutz)
+- key: agb
+  route: /recht/agb
+  layout: narrow
+  sections:
+  - module: LegalText
+    layout: narrow
+    notes: Rechtlicher Text (Impressum, Datenschutz)
+- key: widerruf
+  route: /recht/widerruf
+  layout: narrow
+  sections:
+  - module: LegalText
+    layout: narrow
+    notes: Rechtlicher Text (Impressum, Datenschutz)
