@@ -1,0 +1,24 @@
+name: manus-ci
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}   # Debes haber creado este Secret en el repo
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}  # usa el PAT para checkout si el repo es privado
+      - name: GitHub CLI auth (no interactivo)
+        run: |
+          echo "$GH_TOKEN" | gh auth login --hostname github.com --with-token
+          gh auth status -h github.com
+      - name: Prueba de acceso al repo
+        run: |
+          git ls-remote https://x-access-token:${GH_TOKEN}@github.com/clouitreee/protech.git
