@@ -73,8 +73,9 @@ export async function POST(request: NextRequest) {
     // Get client IP for rate limiting
     const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
 
-    // Check rate limit
-    if (!checkRateLimit(ip)) {
+    // Check rate limit (if enabled)
+    const rateLimitEnabled = process.env.ENABLE_CONTACT_RATE_LIMIT === '1';
+    if (rateLimitEnabled && !checkRateLimit(ip)) {
       console.warn(`Rate limit exceeded for IP: ${ip}`);
       return NextResponse.json(
         { error: 'Too many requests. Please try again later.' },

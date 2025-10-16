@@ -1,0 +1,3 @@
+./remove_vat_terms.py:7:        "inkl. MwSt.", "zzgl. MwSt.", "inkl. USt.", "zzgl. USt.",
+./remove_vat_terms.py:8:        "inkl. Umsatzsteuer", "zzgl. Umsatzsteuer", "inkl. Mehrwertsteuer", "zzgl. Mehrwertsteuer",
+./remove_vat_terms.py:9:        "inkl. VAT", "zzgl. VAT", "inkl. IVA", "zzgl. IVA",
