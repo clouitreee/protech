@@ -9,20 +9,6 @@ interface PlaceholderProps {
   className?: string;
 }
 
-/**
- * Placeholder component for wireframes
- * 
- * This component is used to create low-fidelity wireframe placeholders
- * for various UI elements. It provides a simple, text-based representation
- * of components without any visual styling.
- * 
- * @param type - The type of placeholder (text, image, button, etc.)
- * @param label - Optional label to display inside the placeholder
- * @param width - Optional width (CSS value)
- * @param height - Optional height (CSS value)
- * @param children - Optional children to render inside the placeholder
- * @param className - Optional additional CSS classes
- */
 export const Placeholder: React.FC<PlaceholderProps> = ({
   type,
   label,
@@ -31,36 +17,21 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
   children,
   className = '',
 }) => {
-  const baseStyles: React.CSSProperties = {
-    border: '1px dashed #ccc',
-    padding: '1rem',
-    margin: '0.5rem 0',
-    backgroundColor: '#f9f9f9',
-    color: '#666',
-    fontFamily: 'monospace',
-    fontSize: '0.875rem',
-    width: width || 'auto',
-    height: height || 'auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
+  const baseClasses = 'border border-dashed p-4 my-2 font-mono text-sm flex items-center justify-center text-center';
+  const typeSpecificClasses: Record<string, string> = {
+    text: 'min-h-6 justify-start text-left',
+    image: 'min-h-[200px] bg-surface',
+    button: 'min-h-[2.5rem] max-w-[200px] bg-brand font-bold text-brand-fg',
+    form: 'min-h-[300px] flex-col items-stretch',
+    card: 'min-h-[150px] flex-col items-stretch',
+    grid: 'min-h-[200px] grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4',
+    list: 'min-h-[100px] flex-col items-start',
+    heading: 'min-h-8 text-lg font-bold justify-start text-left',
+    paragraph: 'min-h-12 justify-start text-left',
+    link: 'min-h-6 justify-start text-left underline',
   };
 
-  const typeSpecificStyles: Record<string, React.CSSProperties> = {
-    text: { minHeight: '1.5rem', justifyContent: 'flex-start', textAlign: 'left' },
-    image: { minHeight: '200px', backgroundColor: '#e0e0e0' },
-    button: { minHeight: '2.5rem', maxWidth: '200px', backgroundColor: '#d0d0d0', fontWeight: 'bold' },
-    form: { minHeight: '300px', flexDirection: 'column', alignItems: 'stretch' },
-    card: { minHeight: '150px', flexDirection: 'column', alignItems: 'stretch' },
-    grid: { minHeight: '200px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem' },
-    list: { minHeight: '100px', flexDirection: 'column', alignItems: 'flex-start' },
-    heading: { minHeight: '2rem', fontSize: '1.25rem', fontWeight: 'bold', justifyContent: 'flex-start', textAlign: 'left' },
-    paragraph: { minHeight: '3rem', justifyContent: 'flex-start', textAlign: 'left' },
-    link: { minHeight: '1.5rem', justifyContent: 'flex-start', textAlign: 'left', textDecoration: 'underline' },
-  };
-
-  const combinedStyles = { ...baseStyles, ...typeSpecificStyles[type] };
+  const combinedClasses = `${baseClasses} ${typeSpecificClasses[type]} ${className}`;
 
   const defaultLabels: Record<string, string> = {
     text: '[Text Placeholder]',
@@ -78,7 +49,7 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
   const displayLabel = label || defaultLabels[type] || `[${type.toUpperCase()} Placeholder]`;
 
   return (
-    <div style={combinedStyles} className={`placeholder placeholder-${type} ${className}`}>
+    <div className={combinedClasses}>
       {children || displayLabel}
     </div>
   );
