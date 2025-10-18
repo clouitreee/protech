@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import ContextCTA from '@/components/modules/ContextCTA';
 import { generateMetadata as genMeta } from '@/config/seo';
 
 export const metadata: Metadata = genMeta({
@@ -25,7 +26,11 @@ export default function ServicesPage() {
         </p>
 
         {/* TODO: Implement ServiceCards module */}
-        {/* TODO: Implement ContextCTA module */}
+        <ContextCTA
+          title="Bereit für maßgeschneiderte IT-Lösungen?"
+          subtitle="Entdecken Sie, wie unsere Services Ihr Unternehmen voranbringen."
+          ctaId="services-context-cta"
+        />
       </section>
     </main>
   );
