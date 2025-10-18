@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
+import HeroPrimary from '@/components/modules/HeroPrimary';
 import { generateMetadata as genMeta } from '@/config/seo';
+import FinalCTA from '@/components/modules/FinalCTA';
 
 export const metadata: Metadata = genMeta({
   title: 'Startseite',
@@ -18,22 +20,24 @@ export const metadata: Metadata = genMeta({
 export default function HomePage() {
   return (
     <main className="min-h-screen">
-      <section className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-4">
-          Willkommen bei Tech Hilfe Pro NRW
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Ihr zuverlässiger IT-Partner für kleine und mittelständische Unternehmen in NRW
-        </p>
+
         
-        {/* TODO: Implement HeroPrimary module */}
+<HeroPrimary
+          title="Willkommen bei Tech Hilfe Pro NRW"
+          subtitle="Ihr zuverlässiger IT-Partner für kleine und mittelständische Unternehmen in NRW"
+          ctaId="home-hero-primary"
+        />
         {/* TODO: Implement USPGrid module */}
         {/* TODO: Implement ServiceTeaserGrid module */}
         {/* TODO: Implement PricingTeaser module */}
         {/* TODO: Implement Testimonials module */}
         {/* TODO: Implement MiniFAQ module */}
-        {/* TODO: Implement FinalCTA module */}
-      </section>
+        <FinalCTA
+          title="Bereit für eine bessere IT?"
+          subtitle="Kontaktieren Sie uns für ein unverbindliches Erstgespräch."
+          ctaId="home-final-cta"
+        />
+
     </main>
   );
 }
