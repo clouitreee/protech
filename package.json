@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "husky install",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -13,7 +14,8 @@
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "a11y": "eslint --ext .js,.jsx,.ts,.tsx --plugin jsx-a11y .",
     "test:smoke": "playwright test",
-    "ci": "npm run lint && npm run typecheck && npm run format:check && npm run a11y"
+    "ci": "npm run lint && npm run typecheck && npm run format:check && npm run a11y",
+    "brand:guard": "bash ./.githooks/brand-guard.sh"
   },
   "dependencies": {
     "next": "^14.2.0",
