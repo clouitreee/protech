@@ -18,6 +18,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Simple in-memory rate limiting (in production, use Redis or similar)
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 
+const ENABLE_RATE_LIMIT = process.env.ENABLE_CONTACT_RATE_LIMIT === 'true';
+
 const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
 const RATE_LIMIT_MAX_REQUESTS = 3; // Max 3 requests per hour per IP
 const MIN_FORM_FILL_TIME = 3000; // Minimum 3 seconds to fill the form (time trap)
@@ -71,13 +73,21 @@ function sanitizeInput(input: string): string {
 export async function POST(request: NextRequest) {
   try {
     // Get client IP for rate limiting
-    const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown';
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown';
+    const origin = request.headers.get('origin');
+
+    if (process.env.ALLOWED_ORIGINS && origin && !process.env.ALLOWED_ORIGINS.split(',').includes(origin)) {
+      return NextResponse.json(
+        { status: 'error', message: 'Forbidden origin' },
+        { status: 403 }
+      );
+    }
 
     // Check rate limit
-    if (!checkRateLimit(ip)) {
+    if (ENABLE_RATE_LIMIT && !checkRateLimit(ip)) {
       console.warn(`Rate limit exceeded for IP: ${ip}`);
       return NextResponse.json(
-        { error: 'Too many requests. Please try again later.' },
+        { status: 'error', message: 'Too many requests. Please try again later.' },
         { status: 429 }
       );
     }
@@ -88,7 +98,7 @@ export async function POST(request: NextRequest) {
     // Validation
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: 'Name, email, and message are required' },
+        { status: 'error', message: 'Name, email, and message are required' },
         { status: 400 }
       );
     }
@@ -97,7 +107,7 @@ export async function POST(request: NextRequest) {
     if (honeypot && honeypot.trim() !== '') {
       console.warn(`Honeypot triggered for IP: ${ip}`);
       // Return success to avoid revealing the honeypot
-      return NextResponse.json({ success: true });
+      return NextResponse.json({ status: 'success', message: 'Form submission received (honeypot triggered).' });
     }
 
     // Time trap check (bot detection)
@@ -106,14 +116,14 @@ export async function POST(request: NextRequest) {
       if (formFillTime < MIN_FORM_FILL_TIME) {
         console.warn(`Time trap triggered for IP: ${ip}, fill time: ${formFillTime}ms`);
         // Return success to avoid revealing the time trap
-        return NextResponse.json({ success: true });
+        return NextResponse.json({ status: 'success', message: 'Form submission received (honeypot triggered).' });
       }
     }
 
     // Email validation
     if (!validateEmail(email)) {
       return NextResponse.json(
-        { error: 'Invalid email address' },
+        { status: 'error', message: 'Invalid email address' },
         { status: 400 }
       );
     }
@@ -158,9 +168,10 @@ IP: ${ip} | Zeitstempel: ${new Date().toISOString()}
     const mailFrom = process.env.MAIL_FROM || 'noreply@tech-hilfe-pro-nrw.de';
     
     const { data, error } = await resend.emails.send({
+        replyTo: sanitizedEmail, // Allow direct reply to customer
       from: mailFrom,
       to: mailFrom, // Send to self
-      reply_to: sanitizedEmail, // Allow direct reply to customer
+
       subject: emailSubject,
       html: emailHtml,
       text: emailText,
@@ -169,7 +180,7 @@ IP: ${ip} | Zeitstempel: ${new Date().toISOString()}
     if (error) {
       console.error('Resend email sending error:', error);
       return NextResponse.json(
-        { error: 'Failed to send email' },
+        { status: 'error', message: 'Failed to send email' },
         { status: 500 }
       );
     }
@@ -182,16 +193,16 @@ IP: ${ip} | Zeitstempel: ${new Date().toISOString()}
       timestamp: new Date().toISOString(),
     });
 
-    return NextResponse.json({
-      success: true,
-      message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.',
-    });
+      return NextResponse.json({
+        status: 'success',
+        message: 'Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.',
+      });
   } catch (error) {
     console.error('Contact form processing error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process contact form' },
-      { status: 500 }
-    );
+      return NextResponse.json(
+        { status: 'error', message: 'Failed to process contact form' },
+        { status: 500 }
+      );
   }
 }
 
