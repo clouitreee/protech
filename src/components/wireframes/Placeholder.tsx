@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '@/src/lib/cn';
 
 interface PlaceholderProps {
   type: 'text' | 'image' | 'button' | 'form' | 'card' | 'grid' | 'list' | 'heading' | 'paragraph' | 'link';
@@ -31,36 +32,25 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
   children,
   className = '',
 }) => {
-  const baseStyles: React.CSSProperties = {
-    border: '1px dashed #ccc',
-    padding: '1rem',
-    margin: '0.5rem 0',
-    backgroundColor: '#f9f9f9',
-    color: '#666',
-    fontFamily: 'monospace',
-    fontSize: '0.875rem',
-    width: width || 'auto',
-    height: height || 'auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-  };
+  const baseClasses = cn(
+    'border border-dashed border-gray-400 p-4 m-2 text-gray-600 font-mono text-sm',
+    'flex items-center justify-center text-center',
+    'bg-surface',
+    className
+  );
 
-  const typeSpecificStyles: Record<string, React.CSSProperties> = {
-    text: { minHeight: '1.5rem', justifyContent: 'flex-start', textAlign: 'left' },
-    image: { minHeight: '200px', backgroundColor: '#e0e0e0' },
-    button: { minHeight: '2.5rem', maxWidth: '200px', backgroundColor: '#d0d0d0', fontWeight: 'bold' },
-    form: { minHeight: '300px', flexDirection: 'column', alignItems: 'stretch' },
-    card: { minHeight: '150px', flexDirection: 'column', alignItems: 'stretch' },
-    grid: { minHeight: '200px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem' },
-    list: { minHeight: '100px', flexDirection: 'column', alignItems: 'flex-start' },
-    heading: { minHeight: '2rem', fontSize: '1.25rem', fontWeight: 'bold', justifyContent: 'flex-start', textAlign: 'left' },
-    paragraph: { minHeight: '3rem', justifyContent: 'flex-start', textAlign: 'left' },
-    link: { minHeight: '1.5rem', justifyContent: 'flex-start', textAlign: 'left', textDecoration: 'underline' },
+  const typeSpecificClasses: Record<string, string> = {
+    text: 'min-h-6 justify-start text-left',
+    image: 'min-h-52 bg-gray-200',
+    button: 'min-h-10 max-w-52 bg-brand-primary text-white font-bold',
+    form: 'min-h-72 flex-col items-stretch',
+    card: 'min-h-36 flex-col items-stretch',
+    grid: 'min-h-52 grid grid-cols-auto-fit-minmax-150px-1fr gap-4',
+    list: 'min-h-24 flex-col items-start',
+    heading: 'min-h-8 text-lg font-bold justify-start text-left',
+    paragraph: 'min-h-12 justify-start text-left',
+    link: 'min-h-6 justify-start text-left underline',
   };
-
-  const combinedStyles = { ...baseStyles, ...typeSpecificStyles[type] };
 
   const defaultLabels: Record<string, string> = {
     text: '[Text Placeholder]',
@@ -78,7 +68,13 @@ export const Placeholder: React.FC<PlaceholderProps> = ({
   const displayLabel = label || defaultLabels[type] || `[${type.toUpperCase()} Placeholder]`;
 
   return (
-    <div style={combinedStyles} className={`placeholder placeholder-${type} ${className}`}>
+    <div
+      style={{
+        width: width || 'auto',
+        height: height || 'auto',
+      }}
+      className={cn(baseClasses, typeSpecificClasses[type])}
+    >
       {children || displayLabel}
     </div>
   );

@@ -19,17 +19,39 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { priceId, quantity = 1, customerEmail, successUrl, cancelUrl } = body;
 
+    // Price ID Whitelist (replace with your actual price IDs)
+    const ALLOWED_PRICE_IDS = [
+      process.env.STRIPE_PRICE_ID_BASIC!,
+      process.env.STRIPE_PRICE_ID_PREMIUM!,
+    ];
+
+    if (!ALLOWED_PRICE_IDS.includes(priceId)) {
+      return NextResponse.json(
+        { status: 'error', message: 'Invalid Price ID' },
+        { status: 400 }
+      );
+    }
+
+    // Quantity Limits
+    const MAX_QUANTITY = 5; // Example: limit to 5 items
+    if (quantity < 1 || quantity > MAX_QUANTITY) {
+      return NextResponse.json(
+        { status: 'error', message: `Quantity must be between 1 and ${MAX_QUANTITY}` },
+        { status: 400 }
+      );
+    }
+
     // Validation
     if (!priceId) {
       return NextResponse.json(
-        { error: 'Price ID is required' },
+        { status: 'error', message: 'Price ID is required' },
         { status: 400 }
       );
     }
 
     if (!customerEmail) {
       return NextResponse.json(
-        { error: 'Customer email is required' },
+        { status: 'error', message: 'Customer email is required' },
         { status: 400 }
       );
     }
@@ -55,7 +77,7 @@ export async function POST(request: NextRequest) {
         },
       },
       // Do NOT enable automatic_tax as per §19 UStG
-      // automatic_tax: { enabled: false },
+      automatic_tax: { enabled: false },
       metadata: {
         source: 'tech-hilfe-pro-nrw',
       },
@@ -70,15 +92,15 @@ export async function POST(request: NextRequest) {
 
     if (error instanceof Stripe.errors.StripeError) {
       return NextResponse.json(
-        { error: error.message },
+        { status: 'error', message: error.message },
         { status: error.statusCode || 500 }
       );
     }
 
-    return NextResponse.json(
-      { error: 'Failed to create checkout session' },
-      { status: 500 }
-    );
+      return NextResponse.json(
+        { status: 'error', message: 'Failed to create checkout session' },
+        { status: 500 }
+      );
   }
 }
 

@@ -38,3 +38,23 @@ Die Konfigurationen für Cloudflare Pages (einschließlich Build-Einstellungen u
 Dieses Dokument dient als Nachweis und Leitfaden für die korrekte Konfiguration der Cloudflare-Ressourcen außerhalb des Git-Repositorys.
 ```
 
+
+
+
+## Summary of Removed Configurations (Continued)
+
+### 2. Deprecated `export const config` in Next.js API Routes
+
+**Description:** The `export const config = { api: { bodyParser: false } }` was a Pages API Route specific configuration used to disable body parsing, particularly for Stripe webhooks. This has been deprecated in the App Router.
+
+**Action Taken:**
+- Removed `export const config` from `app/api/stripe/webhook/route.ts`.
+- Migrated to explicit Node.js runtime (`export const runtime = "nodejs"`) and raw body reading (`await req.text()`) for Stripe webhooks.
+
+**Rationale:** The App Router in Next.js handles body parsing differently, and `req.json()` should not be used for webhook routes where raw body access is critical for signature verification. Explicitly defining the runtime and reading the raw body ensures compatibility and security.
+
+## Verification (Continued)
+
+- All instances of `export const config` in API routes have been removed.
+- Stripe webhooks are confirmed to be processing raw bodies correctly, as verified by dedicated tests.
+

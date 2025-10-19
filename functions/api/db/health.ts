@@ -34,7 +34,7 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       return new Response(
         JSON.stringify({
           status: 'ok',
-          message: 'Database connection successful',
+          db: 'connected',
           timestamp: new Date().toISOString(),
         }),
         {
