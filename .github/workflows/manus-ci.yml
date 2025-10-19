@@ -1,9 +1,6 @@
 name: manus-ci
 on:
-  push:
-    branches:
-      - main
-      - '**'
+  push: { branches: [ main, '**' ] }
   pull_request:
 
 permissions:
@@ -14,27 +11,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (scoped token, no creds persistentes)
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          # Usa el token automático; si necesitas PAT, cambia a secrets.GH_TOKEN
+          token: ${{ github.token }}
           persist-credentials: false
 
-      - name: Setup Node 22
-        uses: actions/setup-node@v4
+      - name: Detect package manager
+        id: pm
+        run: |
+          if [ -f pnpm-lock.yaml ]; then echo "cache=pnpm" >> $GITHUB_OUTPUT; echo "cmd=pnpm install --frozen-lockfile" >> $GITHUB_OUTPUT
+          elif [ -f yarn.lock ]; then echo "cache=yarn" >> $GITHUB_OUTPUT; echo "cmd=yarn install --frozen-lockfile" >> $GITHUB_OUTPUT
+          elif [ -f package-lock.json ]; then echo "cache=npm" >> $GITHUB_OUTPUT; echo "cmd=npm ci --ignore-scripts --no-audit --no-fund" >> $GITHUB_OUTPUT
+          else echo "cache=npm" >> $GITHUB_OUTPUT; echo "cmd=npm install --no-audit --fund=false" >> $GITHUB_OUTPUT; fi
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: 22
+          cache: ${{ steps.pm.outputs.cache }}
+
+      - name: Enable Corepack (if yarn/pnpm)
+        if: ${{ steps.pm.outputs.cache != 'npm' }}
+        run: corepack enable
 
       - name: Install deps
-        run: npm ci --ignore-scripts --no-audit --no-fund
-
-      # Guard opcional: solo si ya tienes scripts/guard-vat.js
-      - name: VAT/MwSt compliance guard
-        run: |
-          if [ -f scripts/guard-vat.js ]; then node scripts/guard-vat.js; else echo "guard-vat.js no encontrado, saltando"; fi
-
-      - name: Test
-        run: npm test --if-present
+        run: ${{ steps.pm.outputs.cmd }}
 
       - name: Build
         run: npm run build --if-present
@@ -44,19 +45,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ github.token }}
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
-      - name: Install deps
-        run: npm ci --ignore-scripts --no-audit --no-fund
-      - name: Run Playwright a11y (si existe)
-        run: |
-          if [ -f tests/a11y.spec.ts ]; then
-            npx playwright install --with-deps
-            npx playwright test tests/a11y.spec.ts
-          else
-            echo "a11y.spec.ts no encontrado, saltando"
-          fi
+          node-version: 22
+          cache: npm
+      - run: npm install --no-audit --fund=false
+      - run: npx playwright install --with-deps
+      - run: |
+          if [ -f tests/a11y.spec.ts ]; then npx playwright test tests/a11y.spec.ts; else echo "a11y tests missing"; fi
 
