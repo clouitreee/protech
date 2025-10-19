@@ -12,8 +12,9 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "a11y": "eslint --ext .js,.jsx,.ts,.tsx --plugin jsx-a11y .",
+    "test:stripe-webhook": "playwright test tests/stripe-webhook.spec.ts",
     "test:smoke": "playwright test",
-    "ci": "npm run lint && npm run typecheck && npm run format:check && npm run a11y"
+    "ci": "npm run lint && npm run typecheck && npm run format:check && npm run a11y && npm run test:stripe-webhook"
   },
   "dependencies": {
     "next": "^14.2.0",
