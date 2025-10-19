@@ -1,42 +1,62 @@
- name: manus-ci
- on:
-   push:
-     branches: [ main, "**" ]
-   pull_request:
-+permissions:
-+  contents: write
-+  pull-requests: write
+name: manus-ci
+on:
+  push:
+    branches:
+      - main
+      - '**'
+  pull_request:
 
- jobs:
-   build:
-     runs-on: ubuntu-latest
--    env:
--      GH_TOKEN: ${{ secrets.GH_TOKEN }}
-     steps:
--      - uses: actions/checkout@v4
--      - name: GitHub CLI auth (no interactivo)
--        run: |
--          echo "$GH_TOKEN" | gh auth login --hostname github.com --with-token
--          gh auth status -h github.com
--      - name: Prueba de acceso al repo
--        run: |
--          git ls-remote https://x-access-token:${GH_TOKEN}@github.com/clouitreee/protech.git
-+      - uses: actions/checkout@v4
-+        with:
-+          token: ${{ secrets.GH_TOKEN }}
-+          persist-credentials: false
-+
-+      - name: gh status (sin login interactivo)
-+        env:
-+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-+        run: |
-+          gh --version
-+          gh auth status -h github.com || true
-+
-+      - name: Prueba de acceso al repo (git + token)
-+        env:
-+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-+        run: |
-+          git ls-remote https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git >/dev/null
-+
-+      # …tus pasos de build/test aquí…
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (scoped token, no creds persistentes)
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          persist-credentials: false
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install deps
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      # Guard opcional: solo si ya tienes scripts/guard-vat.js
+      - name: VAT/MwSt compliance guard
+        run: |
+          if [ -f scripts/guard-vat.js ]; then node scripts/guard-vat.js; else echo "guard-vat.js no encontrado, saltando"; fi
+
+      - name: Test
+        run: npm test --if-present
+
+      - name: Build
+        run: npm run build --if-present
+
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install deps
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run Playwright a11y (si existe)
+        run: |
+          if [ -f tests/a11y.spec.ts ]; then
+            npx playwright install --with-deps
+            npx playwright test tests/a11y.spec.ts
+          else
+            echo "a11y.spec.ts no encontrado, saltando"
+          fi
+
